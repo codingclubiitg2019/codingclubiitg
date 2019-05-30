@@ -19,7 +19,7 @@ from django.conf.urls.static import static
 from django.conf import settings
 
 urlpatterns = [
-    path('club/', include('CodingClubIITG.urls')),
+    path('home/', include('CodingClubIITG.urls')),
     path('admin/', admin.site.urls),
 ]
 
