@@ -17,9 +17,14 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls.static import static
 from django.conf import settings
+from django.contrib.auth import views as auth_views
+from CodingClubIITG import views as user_views
 
 urlpatterns = [
     path('home/', include('CodingClubIITG.urls')),
+    path('register/', user_views.register, name='register'),
+    path('login/', auth_views.LoginView.as_view(template_name='CodingClubIITG/login.html'), name='login'),
+    path('logout/', auth_views.LogoutView.as_view(template_name='CodingClubIITG/logout.html'), name='logout'),
     path('admin/', admin.site.urls),
 ]
 
