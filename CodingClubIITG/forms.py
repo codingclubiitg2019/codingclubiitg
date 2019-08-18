@@ -12,7 +12,7 @@ class UserRegisterForm(forms.ModelForm):
 		fields= ['username','email','password']
 
 class ProjectsForm(forms.ModelForm):
-	
+
 	date = forms.DateField(initial=datetime.today().strftime('%Y-%m-%d'), label='Date of Project',widget=forms.widgets.DateTimeInput(attrs={"type": "date"}))
 
 	class Meta:
