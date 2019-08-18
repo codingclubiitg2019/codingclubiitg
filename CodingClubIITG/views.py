@@ -44,3 +44,19 @@ def register(request):
     else:
         form = UserRegisterForm()
     return render(request, 'CodingClubIITG/register.html', {'form': form})
+
+@login_required
+def addProjects(request):
+    if request.method=='POST':
+        form = ProjectsForm(request.POST)
+        if form.is_valid():
+            project = form.save(commit=False)
+            project.save()
+            return redirect('index')
+        else:
+            return redirect('addProjects')
+
+    else:
+        form=ProjectsForm()
+    return render(request, 'CodingClubIITG/addproject.html', {'form': form})
+            
