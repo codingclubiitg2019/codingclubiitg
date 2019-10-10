@@ -4,7 +4,8 @@
 
 
     {% load static %}
-
+    <title>Coding Club IITG</title>
+  <link rel = "icon" href = "{% static 'core/images_2/favicon.ico' %}" type = "image/x-icon">
 	<!-- Meet the team new code in head section-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
@@ -73,7 +74,8 @@
                         {% block events_active %}<li ><a href="{% url 'events' %}"><b>Events</b></a></li>{% endblock %}
                         {% block blog_active %}<li><a href="{% url 'blog' %}"><b>Blog</b> </a></li>{% endblock %}
                         {% block projects_active %}<li class="dropdown"><a href="{% url 'projects' %}"><b>Projects</b> </a></li>{% endblock %}
-                        <li><a href="login"><b>Login</b> </a></li>
+                        <li><a href="{% url 'register' %}"><b>Register</b> </a></li>
+                        <li><a href="{% url 'login' %}"><b>Login</b> </a></li>
                         <li><button class="button button3" ><a id="iitghome" href="http://www.iitg.ac.in/" target="_blank">IITG HOME </a> </button></li>
                     </ul>
                 </div>
@@ -154,7 +156,7 @@
             <div class="col-sm-12">
                 <div class="copyright-text text-center">
                     <p>&copy; Coding Club IITG. All Rights Reserved.</p>
-                    <p>Crafted by <a target="_blank" href="https://www.facebook.com/profile.php?id=100009916350768&ref=br_rs">Sahil Chaturvedi</a> </p>
+                    <p>Crafted by <a target="_blank" href="https://www.facebook.com/profile.php?id=100006958546245">Ritwik Ganguly</a> </p>
                 </div>
             </div>
         </div>
