@@ -18,9 +18,9 @@ def aboutus(request):
 
 
 def events(request):
-    post_array = Post.objects.all()
-    post_list = {'post_list': post_array}
-    return render(request, 'CodingClubIITG/blogtwo.html', post_list)
+    
+    events=Event.objects.all()
+    return render(request, 'CodingClubIITG/events.html', {'events':events})
 
 
 def blog(request):
@@ -28,7 +28,8 @@ def blog(request):
 
 
 def projects(request):
-    return render(request, 'CodingClubIITG/portfolio.html')
+    projects=Projects.objects.all()
+    return render(request, 'CodingClubIITG/projects.html',{'projects':projects})
 
 
 def event_template(request, pk):
@@ -71,3 +72,20 @@ def addProjects(request):
     else:
         form=ProjectsForm()
     return render(request, 'CodingClubIITG/addproject.html', {'form': form})
+
+
+@login_required
+def addEvents(request):
+    if request.method=='POST':
+        form = EventsForm(request.POST)
+        if form.is_valid():
+            event = form.save(commit=False)
+            event.save()
+            return redirect('index')
+        else:
+            return redirect('addEvents')
+
+    else:
+        form=EventsForm()
+    return render(request, 'CodingClubIITG/addevent.html', {'form': form})
+

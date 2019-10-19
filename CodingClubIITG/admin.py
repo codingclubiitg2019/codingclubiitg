@@ -4,4 +4,4 @@ from .models import *
 admin.site.register(Projects)
 # Register your models here.
 
-admin.site.register(Post)
+admin.site.register(Event)

@@ -18,3 +18,11 @@ class ProjectsForm(forms.ModelForm):
 	class Meta:
 		model = Projects
 		fields=['name','status','outline','details','prereq','date']
+
+class EventsForm(forms.ModelForm):
+
+	date = forms.DateField(initial=datetime.today().strftime('%Y-%m-%d'), label='Date of Event',widget=forms.widgets.DateTimeInput(attrs={"type": "date"}))
+
+	class Meta:
+		model = Event
+		fields=['name','venue','speakers','details','date']

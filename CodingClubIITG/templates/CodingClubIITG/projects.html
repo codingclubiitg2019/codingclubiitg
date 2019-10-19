@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container-fluid">
+	<div class="row">
+		{% for project in projects %}
+		<div class="col-sm-4">
+			<div class="card">
+				<div class="card-header">{{ project.name }}</div>
+				<div class="card-block">
+
+					<h3>Outline: {{ project.outline }}</h3>
+					<p>Project Details: {{ project.details }}</p>
+					<p>Pre-Requisites: {{ project.prereq }}</p>
+				</div>
+				<div class="card-footer">Date: {{ project.date }}</div>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+</div>
+{% endblock %}
