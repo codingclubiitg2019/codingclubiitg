@@ -17,7 +17,7 @@ class ProjectsForm(forms.ModelForm):
 
 	class Meta:
 		model = Projects
-		fields=['name','status','outline','details','prereq','date']
+		fields=['name','status','outline','details','prereq','date','img']
 
 class EventsForm(forms.ModelForm):
 
@@ -25,4 +25,4 @@ class EventsForm(forms.ModelForm):
 
 	class Meta:
 		model = Event
-		fields=['name','venue','speakers','details','date']
+		fields=['name','venue','speakers','details','date','img']

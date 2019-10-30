@@ -10,6 +10,7 @@ class Projects(models.Model):
 	details = models.CharField(max_length=30000)
 	prereq = models.CharField(max_length=1000)
 	date = models.DateField(default=date.today)
+	img = models.FileField(upload_to='projects/')
 
 	def __str__(self):
 		return self.name
@@ -24,5 +25,16 @@ class Event(models.Model):
     speakers = models.CharField(max_length=1024)
     details = models.CharField(max_length=30000)
     date = models.DateField(default=date.today)
+    img = models.FileField(upload_to='events/')
 
 
+class Members(models.Model):
+	name= models.CharField(max_length=300)
+	position=models.CharField(max_length=300)
+	fblink=models.URLField(max_length=3000, blank=True, null=True)
+	gitlink=models.URLField(max_length=3000, blank=True, null=True)
+	intro=models.CharField(max_length=1000,blank=True,null=True)
+	img= models.FileField(upload_to='members/')
+
+	def __str__(self):
+		return self.name

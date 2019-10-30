@@ -12,9 +12,10 @@ from django.shortcuts import get_object_or_404
 def index(request):
     return render(request, 'CodingClubIITG/index.html')
 
-
 def aboutus(request):
-    return render(request, 'CodingClubIITG/aboutus.html')
+    members=Members.objects.all()
+   
+    return render(request,'CodingClubIITG/aboutus.html',{'members': members})
 
 
 def events(request):
