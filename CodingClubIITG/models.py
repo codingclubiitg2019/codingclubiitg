@@ -1,7 +1,10 @@
 from django.db import models
 from datetime import date
-from django.contrib.auth.models import User
+from django.contrib.auth.models import AbstractUser
 # Create your models here.
+
+class User(AbstractUser):
+	IsApproved = models.BooleanField(default=False)
 
 class Projects(models.Model):
 	name = models.CharField(max_length=1024)
@@ -10,7 +13,7 @@ class Projects(models.Model):
 	details = models.CharField(max_length=30000)
 	prereq = models.CharField(max_length=1000)
 	date = models.DateField(default=date.today)
-	img = models.FileField(upload_to='projects/')
+	img = models.ImageField(upload_to='projects/')
 
 	def __str__(self):
 		return self.name

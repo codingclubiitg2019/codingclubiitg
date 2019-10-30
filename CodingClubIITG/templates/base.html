@@ -65,7 +65,7 @@
                     <span class="icon-bar"></span>
                 </button>
 
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="{% url 'index' %}">
                  <h1><img src="{% static 'CodingClubIITG/images/18623168_453929331606843_1092010086_n.png' %}" alt="logo" height=60px;></h1>
                  <p> <img src="{% static 'CodingClubIITG/images/18600949_453929328273510_283481760_n.png' %}" alt="logo" height=28px;> </p>
              </a>
@@ -76,7 +76,7 @@
                 {% block home_active %}<li ><a href= "{% url 'index' %}" ><b>Home</b></a></li>{% endblock %}
                 {% block About_us_active %}<li class="dropdown"><a href="{% url 'aboutus' %}"><b>About Us</b> </a></li>{% endblock %}
                 {% block events_active %}<li ><a href="{% url 'events' %}"><b>Events</b></a></li>{% endblock %}
-                {% block blog_active %}<li><a href="{% url 'blog' %}"><b>Blog</b> </a></li>{% endblock %}
+                <!-- {% block blog_active %}<li><a href="{% url 'blog' %}"><b>Blog</b> </a></li>{% endblock %} -->
                 {% block projects_active %}<li class="dropdown"><a href="{% url 'projects' %}"><b>Projects</b> </a></li>{% endblock %}
                 {% if user.is_authenticated %}
                 <li><a href="javascript:{document.getElementById('logout').submit()}"><b>Logout</b></a>

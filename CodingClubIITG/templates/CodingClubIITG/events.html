@@ -7,7 +7,7 @@
 			<div class="card">
 				<div class="card-header"><a href="{% url 'event_detail' event.id %}">{{ event.name }}</a></div>
 				<div class="card-block">
-
+					<img class="img-responsive" style="object-fit: cover;" src="{{ event.img.url }}">
 					<h3>Venue: {{ event.venue }}</h3>
 					<p>Event Details: {{ event.details }}</p>
 					<h3>Speakers: {{ event.speakers }}</p>
