@@ -14,7 +14,7 @@ def index(request):
 
 def aboutus(request):
     members=Members.objects.all()
-   
+
     return render(request,'CodingClubIITG/aboutus.html',{'members': members})
 
 
@@ -71,7 +71,8 @@ def register(request):
 @login_required
 def addProjects(request):
     if request.method=='POST':
-        form = ProjectsForm(request.POST)
+        form = ProjectsForm(request.POST, request.FILES)
+        print(form)
         if form.is_valid():
             project = form.save(commit=False)
             project.save()
@@ -87,7 +88,7 @@ def addProjects(request):
 @login_required
 def addEvents(request):
     if request.method=='POST':
-        form = EventsForm(request.POST)
+        form = EventsForm(request.POST, request.FILES)
         if form.is_valid():
             event = form.save(commit=False)
             event.save()

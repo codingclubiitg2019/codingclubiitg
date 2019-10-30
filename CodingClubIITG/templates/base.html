@@ -78,6 +78,7 @@
             <ul class="nav navbar-nav navbar-right">
                 {% block home_active %}<li ><a href= "{% url 'index' %}" ><b>Home</b></a></li>{% endblock %}
                 {% block About_us_active %}<li class="dropdown"><a href="{% url 'aboutus' %}"><b>About Us</b> </a></li>{% endblock %}
+                <!-- {% block blog_active %}<li><a href="{% url 'blog' %}"><b>Blog</b> </a></li>{% endblock %} -->
                 {% if user.is_authenticated %}
                 {% block events_active %}<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown" ><b>Events</b> </a>
                     <div class="dropdown-menu">
