@@ -35,6 +35,7 @@ class Members(models.Model):
 	gitlink=models.URLField(max_length=3000, blank=True, null=True)
 	intro=models.CharField(max_length=1000,blank=True,null=True)
 	img= models.FileField(upload_to='members/')
+	year = models.IntegerField()
 
 	def __str__(self):
 		return self.name

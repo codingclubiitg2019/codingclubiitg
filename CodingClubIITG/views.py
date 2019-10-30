@@ -77,7 +77,7 @@ def addProjects(request):
             project.save()
             return redirect('index')
         else:
-            return redirect('addProjects')
+            return redirect('addprojects')
 
     else:
         form=ProjectsForm()

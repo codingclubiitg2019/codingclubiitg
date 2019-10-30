@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
     <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
     <link rel="stylesheet" type="text/css" href="{% static 'CodingClubIITG/css/style1.css' %}">
@@ -40,7 +43,7 @@
 
 <body>
 	<header id="header">
-     <div class="container">
+       <div class="container">
         <div class="row">
             <div class="col-sm-12 overflow">
                 <div class="social-icons pull-right">
@@ -66,18 +69,36 @@
                 </button>
 
                 <a class="navbar-brand" href="index.html">
-                 <h1><img src="{% static 'CodingClubIITG/images/18623168_453929331606843_1092010086_n.png' %}" alt="logo" height=60px;></h1>
-                 <p> <img src="{% static 'CodingClubIITG/images/18600949_453929328273510_283481760_n.png' %}" alt="logo" height=28px;> </p>
-             </a>
+                   <h1><img src="{% static 'CodingClubIITG/images/18623168_453929331606843_1092010086_n.png' %}" alt="logo" height=60px;></h1>
+                   <p> <img src="{% static 'CodingClubIITG/images/18600949_453929328273510_283481760_n.png' %}" alt="logo" height=28px;> </p>
+               </a>
 
-         </div>
-         <div class="collapse navbar-collapse">
+           </div>
+           <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
                 {% block home_active %}<li ><a href= "{% url 'index' %}" ><b>Home</b></a></li>{% endblock %}
                 {% block About_us_active %}<li class="dropdown"><a href="{% url 'aboutus' %}"><b>About Us</b> </a></li>{% endblock %}
-                {% block events_active %}<li ><a href="{% url 'events' %}"><b>Events</b></a></li>{% endblock %}
+                {% if user.is_authenticated %}
+                {% block events_active %}<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown" ><b>Events</b> </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="{% url 'events' %}" style="color: #000000;">View Events</a>
+                        <a class="dropdown-item" href="{% url 'addevents' %}" style="color: #000000;">Add Events</a>
+                    </div>
+                </li>{% endblock %}
+                {% else %}
+                {% block events %}<li class="dropdown"><a href="{% url 'events' %}"><b>Events</b> </a></li>{% endblock %}
+                {% endif %}
                 {% block blog_active %}<li><a href="{% url 'blog' %}"><b>Blog</b> </a></li>{% endblock %}
-                {% block projects_active %}<li class="dropdown"><a href="{% url 'projects' %}"><b>Projects</b> </a></li>{% endblock %}
+                {% if user.is_authenticated %}
+                {% block projects_active %}<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown" ><b>Projects</b> </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="{% url 'projects' %}" style="color: #000000;">View Projects</a>
+                        <a class="dropdown-item" href="{% url 'addprojects' %}" style="color: #000000;">Add Projects</a>
+                    </div>
+                </li>{% endblock %}
+                {% else %}
+                {% block projects %}<li class="dropdown"><a href="{% url 'projects' %}"><b>Projects</b> </a></li>{% endblock %}
+                {% endif %}
                 {% if user.is_authenticated %}
                 <li><a href="javascript:{document.getElementById('logout').submit()}"><b>Logout</b></a>
                   <form action="{% url 'logout' %}" id="logout" method="POST">

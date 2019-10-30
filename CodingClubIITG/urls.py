@@ -6,7 +6,7 @@ from . import views
 
 urlpatterns = [
     re_path('^addprojects/$', views.addProjects, name = 'addprojects'),
-    re_path('^addevents/$', views.addEvents, name = 'addEvents'),
+    re_path('^addevents/$', views.addEvents, name = 'addevents'),
     re_path('^$', views.index, name='index'),
     re_path('^aboutus/$', views.aboutus, name='aboutus'),
     re_path('^blog/$', views.blog, name='blog'),
