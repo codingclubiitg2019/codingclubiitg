@@ -13,5 +13,7 @@ urlpatterns = [
     re_path('^events/$', views.events, name='events'),
     re_path('^projects/$', views.projects, name='projects'),
     # path('logout/', views.logout, name='logout'),
-    re_path('^eventdescription/<int:pk>$', views.event_template, name='event_template')
+    re_path('^eventdescription/<int:pk>$', views.event_template, name='event_template'),
+    path("projects/<slug:ProjectID>", views.project_detail, name="project_detail"),
+    path("events/<slug:EventID>", views.event_detail, name="event_detail")
 ]
