@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Event Details{% endblock %}
+
+{% block content %}
+    {{ event.name }}
+    {{ event.venue }}
+    {{ event.speakers }}
+    {{ event.details }}
+    {{ event.date }}
+{% endblock %}

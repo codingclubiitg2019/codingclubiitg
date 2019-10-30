@@ -18,19 +18,28 @@ def aboutus(request):
 
 
 def events(request):
-    
-    events=Event.objects.all()
+    events=Event.objects.all().order_by("-date")
     return render(request, 'CodingClubIITG/events.html', {'events':events})
 
+def event_detail(request, EventID):
+    event = Event.objects.get(pk=EventID)
+    return render(request, "CodingClubIITG/event_detail.html", {
+        "event": event
+    })
 
 def blog(request):
     return render(request, 'CodingClubIITG/blogone.html')
 
 
 def projects(request):
-    projects=Projects.objects.all()
+    projects=Projects.objects.all().order_by("-date")
     return render(request, 'CodingClubIITG/projects.html',{'projects':projects})
 
+def project_detail(request, ProjectID):
+    project = Projects.objects.get(pk=ProjectID)
+    return render(request, "CodingClubIITG/project_detail.html", {
+        "project": project
+    })
 
 def event_template(request, pk):
     post = get_object_or_404(Post, pk=pk)
@@ -88,4 +97,3 @@ def addEvents(request):
     else:
         form=EventsForm()
     return render(request, 'CodingClubIITG/addevent.html', {'form': form})
-
