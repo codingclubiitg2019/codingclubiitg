@@ -4,9 +4,15 @@
 {% block title %}Event Details{% endblock %}
 
 {% block content %}
-    {{ event.name }}
-    {{ event.venue }}
-    {{ event.speakers }}
-    {{ event.details }}
-    {{ event.date }}
+
+<div class="panel panel-default">
+	<div class="panel-heading"><h1><strong>{{event.name}}</strong></h1></div>
+	<div class="panel-body">
+		<img src="{{event.img.url}}" class="img-responsive"  style="object-fit: cover;">
+		<h2><strong>Speakers: </strong>{{event.speakers}}</h2>
+		<p>{{event.details}}</p>
+		<h4><strong>Venue: </strong>{{event.venue}}</h4>
+		<h4><strong>Date: </strong>{{event.date}}</h4>
+	</div>
+</div>
 {% endblock %}

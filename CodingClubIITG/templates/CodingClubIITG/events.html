@@ -5,7 +5,7 @@
 		{% for event in events %}
 		<div class="col-sm-4">
 			<div class="card">
-				<div class="card-header"><a href="{% url 'event_detail' event.id %}">{{ event.name }}</a></div>
+				<div class="card-header"><h1><a href="{% url 'event_detail' event.id %}">{{ event.name }}</a></h1></div>
 				<div class="card-block">
 					<img class="img-responsive" style="object-fit: cover;" src="{{ event.img.url }}">
 					<h3>Venue: {{ event.venue }}</h3>
