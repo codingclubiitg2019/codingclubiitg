@@ -1,0 +1,1456 @@
+Starting codingclubiitg as coding-club
+[2020-03-13 17:04:10 +0530] [24535] [DEBUG] Current configuration:
+  config: None
+  bind: ['unix:/webapps/codingclubiitg/run/gunicorn.sock']
+  backlog: 2048
+  workers: 97
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /webapps/codingclubiitg
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1001
+  group: 999
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: -
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: codingclubiitg
+  default_proc_name: mysite.wsgi:application
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f70a83af840>
+  on_reload: <function OnReload.on_reload at 0x7f70a83af950>
+  when_ready: <function WhenReady.when_ready at 0x7f70a83afa60>
+  pre_fork: <function Prefork.pre_fork at 0x7f70a83afb70>
+  post_fork: <function Postfork.post_fork at 0x7f70a83afc80>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f70a83afd90>
+  worker_int: <function WorkerInt.worker_int at 0x7f70a83afea0>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f70a83c6048>
+  pre_exec: <function PreExec.pre_exec at 0x7f70a83c6158>
+  pre_request: <function PreRequest.pre_request at 0x7f70a83c6268>
+  post_request: <function PostRequest.post_request at 0x7f70a83c62f0>
+  child_exit: <function ChildExit.child_exit at 0x7f70a83c6400>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f70a83c6510>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f70a83c6620>
+  on_exit: <function OnExit.on_exit at 0x7f70a83c6730>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2020-03-13 17:04:10 +0530] [24535] [INFO] Starting gunicorn 20.0.4
+[2020-03-13 17:04:10 +0530] [24535] [DEBUG] Arbiter booted
+[2020-03-13 17:04:10 +0530] [24535] [INFO] Listening at: unix:/webapps/codingclubiitg/run/gunicorn.sock (24535)
+[2020-03-13 17:04:10 +0530] [24535] [INFO] Using worker: sync
+[2020-03-13 17:04:10 +0530] [24543] [INFO] Booting worker with pid: 24543
+[2020-03-13 17:04:10 +0530] [24544] [INFO] Booting worker with pid: 24544
+[2020-03-13 17:04:10 +0530] [24546] [INFO] Booting worker with pid: 24546
+[2020-03-13 17:04:10 +0530] [24547] [INFO] Booting worker with pid: 24547
+[2020-03-13 17:04:10 +0530] [24549] [INFO] Booting worker with pid: 24549
+[2020-03-13 17:04:10 +0530] [24551] [INFO] Booting worker with pid: 24551
+[2020-03-13 17:04:10 +0530] [24553] [INFO] Booting worker with pid: 24553
+[2020-03-13 17:04:10 +0530] [24554] [INFO] Booting worker with pid: 24554
+[2020-03-13 17:04:10 +0530] [24556] [INFO] Booting worker with pid: 24556
+[2020-03-13 17:04:10 +0530] [24557] [INFO] Booting worker with pid: 24557
+[2020-03-13 17:04:10 +0530] [24559] [INFO] Booting worker with pid: 24559
+[2020-03-13 17:04:10 +0530] [24560] [INFO] Booting worker with pid: 24560
+[2020-03-13 17:04:11 +0530] [24562] [INFO] Booting worker with pid: 24562
+[2020-03-13 17:04:11 +0530] [24564] [INFO] Booting worker with pid: 24564
+[2020-03-13 17:04:11 +0530] [24566] [INFO] Booting worker with pid: 24566
+[2020-03-13 17:04:11 +0530] [24567] [INFO] Booting worker with pid: 24567
+[2020-03-13 17:04:11 +0530] [24569] [INFO] Booting worker with pid: 24569
+[2020-03-13 17:04:11 +0530] [24571] [INFO] Booting worker with pid: 24571
+[2020-03-13 17:04:11 +0530] [24572] [INFO] Booting worker with pid: 24572
+[2020-03-13 17:04:11 +0530] [24573] [INFO] Booting worker with pid: 24573
+[2020-03-13 17:04:11 +0530] [24575] [INFO] Booting worker with pid: 24575
+[2020-03-13 17:04:11 +0530] [24577] [INFO] Booting worker with pid: 24577
+[2020-03-13 17:04:11 +0530] [24578] [INFO] Booting worker with pid: 24578
+[2020-03-13 17:04:11 +0530] [24580] [INFO] Booting worker with pid: 24580
+[2020-03-13 17:04:11 +0530] [24581] [INFO] Booting worker with pid: 24581
+[2020-03-13 17:04:11 +0530] [24582] [INFO] Booting worker with pid: 24582
+[2020-03-13 17:04:11 +0530] [24584] [INFO] Booting worker with pid: 24584
+[2020-03-13 17:04:11 +0530] [24585] [INFO] Booting worker with pid: 24585
+[2020-03-13 17:04:11 +0530] [24586] [INFO] Booting worker with pid: 24586
+[2020-03-13 17:04:11 +0530] [24588] [INFO] Booting worker with pid: 24588
+[2020-03-13 17:04:11 +0530] [24589] [INFO] Booting worker with pid: 24589
+[2020-03-13 17:04:12 +0530] [24591] [INFO] Booting worker with pid: 24591
+[2020-03-13 17:04:12 +0530] [24592] [INFO] Booting worker with pid: 24592
+[2020-03-13 17:04:12 +0530] [24594] [INFO] Booting worker with pid: 24594
+[2020-03-13 17:04:12 +0530] [24596] [INFO] Booting worker with pid: 24596
+[2020-03-13 17:04:12 +0530] [24597] [INFO] Booting worker with pid: 24597
+[2020-03-13 17:04:12 +0530] [24599] [INFO] Booting worker with pid: 24599
+[2020-03-13 17:04:12 +0530] [24600] [INFO] Booting worker with pid: 24600
+[2020-03-13 17:04:12 +0530] [24602] [INFO] Booting worker with pid: 24602
+[2020-03-13 17:04:12 +0530] [24603] [INFO] Booting worker with pid: 24603
+[2020-03-13 17:04:12 +0530] [24604] [INFO] Booting worker with pid: 24604
+[2020-03-13 17:04:12 +0530] [24606] [INFO] Booting worker with pid: 24606
+[2020-03-13 17:04:12 +0530] [24607] [INFO] Booting worker with pid: 24607
+[2020-03-13 17:04:12 +0530] [24608] [INFO] Booting worker with pid: 24608
+[2020-03-13 17:04:12 +0530] [24610] [INFO] Booting worker with pid: 24610
+[2020-03-13 17:04:12 +0530] [24612] [INFO] Booting worker with pid: 24612
+[2020-03-13 17:04:12 +0530] [24613] [INFO] Booting worker with pid: 24613
+[2020-03-13 17:04:12 +0530] [24615] [INFO] Booting worker with pid: 24615
+[2020-03-13 17:04:12 +0530] [24616] [INFO] Booting worker with pid: 24616
+[2020-03-13 17:04:12 +0530] [24618] [INFO] Booting worker with pid: 24618
+[2020-03-13 17:04:12 +0530] [24619] [INFO] Booting worker with pid: 24619
+[2020-03-13 17:04:13 +0530] [24621] [INFO] Booting worker with pid: 24621
+[2020-03-13 17:04:13 +0530] [24623] [INFO] Booting worker with pid: 24623
+[2020-03-13 17:04:13 +0530] [24625] [INFO] Booting worker with pid: 24625
+[2020-03-13 17:04:13 +0530] [24626] [INFO] Booting worker with pid: 24626
+[2020-03-13 17:04:13 +0530] [24628] [INFO] Booting worker with pid: 24628
+[2020-03-13 17:04:13 +0530] [24629] [INFO] Booting worker with pid: 24629
+[2020-03-13 17:04:13 +0530] [24631] [INFO] Booting worker with pid: 24631
+[2020-03-13 17:04:13 +0530] [24632] [INFO] Booting worker with pid: 24632
+[2020-03-13 17:04:13 +0530] [24634] [INFO] Booting worker with pid: 24634
+[2020-03-13 17:04:13 +0530] [24635] [INFO] Booting worker with pid: 24635
+[2020-03-13 17:04:13 +0530] [24637] [INFO] Booting worker with pid: 24637
+[2020-03-13 17:04:13 +0530] [24638] [INFO] Booting worker with pid: 24638
+[2020-03-13 17:04:13 +0530] [24640] [INFO] Booting worker with pid: 24640
+[2020-03-13 17:04:13 +0530] [24641] [INFO] Booting worker with pid: 24641
+[2020-03-13 17:04:13 +0530] [24643] [INFO] Booting worker with pid: 24643
+[2020-03-13 17:04:13 +0530] [24645] [INFO] Booting worker with pid: 24645
+[2020-03-13 17:04:13 +0530] [24646] [INFO] Booting worker with pid: 24646
+[2020-03-13 17:04:13 +0530] [24647] [INFO] Booting worker with pid: 24647
+[2020-03-13 17:04:13 +0530] [24648] [INFO] Booting worker with pid: 24648
+[2020-03-13 17:04:14 +0530] [24650] [INFO] Booting worker with pid: 24650
+[2020-03-13 17:04:14 +0530] [24651] [INFO] Booting worker with pid: 24651
+[2020-03-13 17:04:14 +0530] [24653] [INFO] Booting worker with pid: 24653
+[2020-03-13 17:04:14 +0530] [24655] [INFO] Booting worker with pid: 24655
+[2020-03-13 17:04:14 +0530] [24656] [INFO] Booting worker with pid: 24656
+[2020-03-13 17:04:14 +0530] [24658] [INFO] Booting worker with pid: 24658
+[2020-03-13 17:04:14 +0530] [24659] [INFO] Booting worker with pid: 24659
+[2020-03-13 17:04:14 +0530] [24660] [INFO] Booting worker with pid: 24660
+[2020-03-13 17:04:14 +0530] [24661] [INFO] Booting worker with pid: 24661
+[2020-03-13 17:04:14 +0530] [24663] [INFO] Booting worker with pid: 24663
+[2020-03-13 17:04:14 +0530] [24665] [INFO] Booting worker with pid: 24665
+[2020-03-13 17:04:14 +0530] [24667] [INFO] Booting worker with pid: 24667
+[2020-03-13 17:04:14 +0530] [24668] [INFO] Booting worker with pid: 24668
+[2020-03-13 17:04:14 +0530] [24670] [INFO] Booting worker with pid: 24670
+[2020-03-13 17:04:14 +0530] [24671] [INFO] Booting worker with pid: 24671
+[2020-03-13 17:04:14 +0530] [24672] [INFO] Booting worker with pid: 24672
+[2020-03-13 17:04:14 +0530] [24674] [INFO] Booting worker with pid: 24674
+[2020-03-13 17:04:14 +0530] [24675] [INFO] Booting worker with pid: 24675
+[2020-03-13 17:04:14 +0530] [24677] [INFO] Booting worker with pid: 24677
+[2020-03-13 17:04:15 +0530] [24679] [INFO] Booting worker with pid: 24679
+[2020-03-13 17:04:15 +0530] [24680] [INFO] Booting worker with pid: 24680
+[2020-03-13 17:04:15 +0530] [24682] [INFO] Booting worker with pid: 24682
+[2020-03-13 17:04:15 +0530] [24684] [INFO] Booting worker with pid: 24684
+[2020-03-13 17:04:15 +0530] [24685] [INFO] Booting worker with pid: 24685
+[2020-03-13 17:04:15 +0530] [24687] [INFO] Booting worker with pid: 24687
+[2020-03-13 17:04:15 +0530] [24689] [INFO] Booting worker with pid: 24689
+[2020-03-13 17:04:15 +0530] [24690] [INFO] Booting worker with pid: 24690
+[2020-03-13 17:04:15 +0530] [24535] [DEBUG] 97 workers
+[2020-03-13 11:45:05 +0000] [24667] [DEBUG] GET /
+Invalid HTTP_HOST header: '172.16.101.211'. You may need to add '172.16.101.211' to ALLOWED_HOSTS.
+Bad Request: /
+[2020-03-13 11:46:14 +0000] [24573] [DEBUG] GET /
+Invalid HTTP_HOST header: '172.16.101.211'. You may need to add '172.16.101.211' to ALLOWED_HOSTS.
+Bad Request: /
+[2020-03-13 11:46:18 +0000] [24615] [DEBUG] GET /codingclubiitg
+Invalid HTTP_HOST header: '172.16.101.211'. You may need to add '172.16.101.211' to ALLOWED_HOSTS.
+Bad Request: /codingclubiitg
+[2020-03-13 11:46:36 +0000] [24667] [DEBUG] GET /
+Invalid HTTP_HOST header: '172.16.101.211'. You may need to add '172.16.101.211' to ALLOWED_HOSTS.
+Bad Request: /
+[2020-03-13 11:46:42 +0000] [24547] [DEBUG] GET /
+Invalid HTTP_HOST header: '172.16.101.211'. You may need to add '172.16.101.211' to ALLOWED_HOSTS.
+Bad Request: /
+[2020-03-13 11:46:45 +0000] [24592] [DEBUG] GET /home
+Invalid HTTP_HOST header: '172.16.101.211'. You may need to add '172.16.101.211' to ALLOWED_HOSTS.
+Bad Request: /home
+[2020-03-13 17:17:52 +0530] [24535] [INFO] Handling signal: term
+[2020-03-13 11:47:52 +0000] [24547] [INFO] Worker exiting (pid: 24547)
+[2020-03-13 11:47:52 +0000] [24544] [INFO] Worker exiting (pid: 24544)
+[2020-03-13 11:47:52 +0000] [24543] [INFO] Worker exiting (pid: 24543)
+[2020-03-13 11:47:52 +0000] [24562] [INFO] Worker exiting (pid: 24562)
+[2020-03-13 11:47:52 +0000] [24566] [INFO] Worker exiting (pid: 24566)
+[2020-03-13 11:47:52 +0000] [24549] [INFO] Worker exiting (pid: 24549)
+[2020-03-13 11:47:52 +0000] [24553] [INFO] Worker exiting (pid: 24553)
+[2020-03-13 11:47:52 +0000] [24546] [INFO] Worker exiting (pid: 24546)
+[2020-03-13 11:47:52 +0000] [24564] [INFO] Worker exiting (pid: 24564)
+[2020-03-13 11:47:52 +0000] [24551] [INFO] Worker exiting (pid: 24551)
+[2020-03-13 11:47:52 +0000] [24571] [INFO] Worker exiting (pid: 24571)
+[2020-03-13 11:47:52 +0000] [24556] [INFO] Worker exiting (pid: 24556)
+[2020-03-13 11:47:52 +0000] [24567] [INFO] Worker exiting (pid: 24567)
+[2020-03-13 11:47:52 +0000] [24554] [INFO] Worker exiting (pid: 24554)
+[2020-03-13 11:47:52 +0000] [24559] [INFO] Worker exiting (pid: 24559)
+[2020-03-13 11:47:52 +0000] [24578] [INFO] Worker exiting (pid: 24578)
+[2020-03-13 11:47:52 +0000] [24569] [INFO] Worker exiting (pid: 24569)
+[2020-03-13 11:47:52 +0000] [24560] [INFO] Worker exiting (pid: 24560)
+[2020-03-13 11:47:52 +0000] [24573] [INFO] Worker exiting (pid: 24573)
+[2020-03-13 11:47:52 +0000] [24557] [INFO] Worker exiting (pid: 24557)
+[2020-03-13 11:47:52 +0000] [24572] [INFO] Worker exiting (pid: 24572)
+[2020-03-13 11:47:52 +0000] [24577] [INFO] Worker exiting (pid: 24577)
+[2020-03-13 11:47:52 +0000] [24580] [INFO] Worker exiting (pid: 24580)
+[2020-03-13 11:47:52 +0000] [24575] [INFO] Worker exiting (pid: 24575)
+[2020-03-13 11:47:52 +0000] [24594] [INFO] Worker exiting (pid: 24594)
+[2020-03-13 11:47:52 +0000] [24584] [INFO] Worker exiting (pid: 24584)
+[2020-03-13 11:47:52 +0000] [24588] [INFO] Worker exiting (pid: 24588)
+[2020-03-13 11:47:52 +0000] [24603] [INFO] Worker exiting (pid: 24603)
+[2020-03-13 11:47:52 +0000] [24602] [INFO] Worker exiting (pid: 24602)
+[2020-03-13 11:47:52 +0000] [24596] [INFO] Worker exiting (pid: 24596)
+[2020-03-13 11:47:52 +0000] [24592] [INFO] Worker exiting (pid: 24592)
+[2020-03-13 11:47:52 +0000] [24581] [INFO] Worker exiting (pid: 24581)
+[2020-03-13 11:47:52 +0000] [24600] [INFO] Worker exiting (pid: 24600)
+[2020-03-13 11:47:52 +0000] [24586] [INFO] Worker exiting (pid: 24586)
+[2020-03-13 11:47:52 +0000] [24616] [INFO] Worker exiting (pid: 24616)
+[2020-03-13 11:47:52 +0000] [24607] [INFO] Worker exiting (pid: 24607)
+[2020-03-13 11:47:52 +0000] [24610] [INFO] Worker exiting (pid: 24610)
+[2020-03-13 11:47:52 +0000] [24621] [INFO] Worker exiting (pid: 24621)
+[2020-03-13 11:47:52 +0000] [24597] [INFO] Worker exiting (pid: 24597)
+[2020-03-13 11:47:52 +0000] [24626] [INFO] Worker exiting (pid: 24626)
+[2020-03-13 11:47:52 +0000] [24585] [INFO] Worker exiting (pid: 24585)
+[2020-03-13 11:47:52 +0000] [24612] [INFO] Worker exiting (pid: 24612)
+[2020-03-13 11:47:52 +0000] [24623] [INFO] Worker exiting (pid: 24623)
+[2020-03-13 11:47:52 +0000] [24591] [INFO] Worker exiting (pid: 24591)
+[2020-03-13 11:47:52 +0000] [24604] [INFO] Worker exiting (pid: 24604)
+[2020-03-13 11:47:52 +0000] [24582] [INFO] Worker exiting (pid: 24582)
+[2020-03-13 11:47:52 +0000] [24613] [INFO] Worker exiting (pid: 24613)
+[2020-03-13 11:47:52 +0000] [24589] [INFO] Worker exiting (pid: 24589)
+[2020-03-13 11:47:52 +0000] [24625] [INFO] Worker exiting (pid: 24625)
+[2020-03-13 11:47:52 +0000] [24618] [INFO] Worker exiting (pid: 24618)
+[2020-03-13 11:47:52 +0000] [24606] [INFO] Worker exiting (pid: 24606)
+[2020-03-13 11:47:52 +0000] [24638] [INFO] Worker exiting (pid: 24638)
+[2020-03-13 11:47:52 +0000] [24628] [INFO] Worker exiting (pid: 24628)
+[2020-03-13 11:47:52 +0000] [24645] [INFO] Worker exiting (pid: 24645)
+[2020-03-13 11:47:52 +0000] [24643] [INFO] Worker exiting (pid: 24643)
+[2020-03-13 11:47:52 +0000] [24635] [INFO] Worker exiting (pid: 24635)
+[2020-03-13 11:47:52 +0000] [24608] [INFO] Worker exiting (pid: 24608)
+[2020-03-13 11:47:52 +0000] [24634] [INFO] Worker exiting (pid: 24634)
+[2020-03-13 11:47:52 +0000] [24629] [INFO] Worker exiting (pid: 24629)
+[2020-03-13 11:47:52 +0000] [24632] [INFO] Worker exiting (pid: 24632)
+[2020-03-13 11:47:52 +0000] [24641] [INFO] Worker exiting (pid: 24641)
+[2020-03-13 11:47:52 +0000] [24599] [INFO] Worker exiting (pid: 24599)
+[2020-03-13 11:47:52 +0000] [24615] [INFO] Worker exiting (pid: 24615)
+[2020-03-13 11:47:52 +0000] [24640] [INFO] Worker exiting (pid: 24640)
+[2020-03-13 11:47:52 +0000] [24619] [INFO] Worker exiting (pid: 24619)
+[2020-03-13 11:47:52 +0000] [24637] [INFO] Worker exiting (pid: 24637)
+[2020-03-13 11:47:52 +0000] [24646] [INFO] Worker exiting (pid: 24646)
+[2020-03-13 11:47:52 +0000] [24651] [INFO] Worker exiting (pid: 24651)
+[2020-03-13 11:47:52 +0000] [24650] [INFO] Worker exiting (pid: 24650)
+[2020-03-13 11:47:52 +0000] [24656] [INFO] Worker exiting (pid: 24656)
+[2020-03-13 11:47:52 +0000] [24653] [INFO] Worker exiting (pid: 24653)
+[2020-03-13 11:47:52 +0000] [24647] [INFO] Worker exiting (pid: 24647)
+[2020-03-13 11:47:52 +0000] [24648] [INFO] Worker exiting (pid: 24648)
+[2020-03-13 11:47:52 +0000] [24655] [INFO] Worker exiting (pid: 24655)
+[2020-03-13 11:47:52 +0000] [24631] [INFO] Worker exiting (pid: 24631)
+[2020-03-13 11:47:52 +0000] [24659] [INFO] Worker exiting (pid: 24659)
+[2020-03-13 11:47:52 +0000] [24658] [INFO] Worker exiting (pid: 24658)
+[2020-03-13 11:47:52 +0000] [24660] [INFO] Worker exiting (pid: 24660)
+[2020-03-13 11:47:52 +0000] [24667] [INFO] Worker exiting (pid: 24667)
+[2020-03-13 11:47:52 +0000] [24679] [INFO] Worker exiting (pid: 24679)
+[2020-03-13 11:47:52 +0000] [24670] [INFO] Worker exiting (pid: 24670)
+[2020-03-13 11:47:52 +0000] [24682] [INFO] Worker exiting (pid: 24682)
+[2020-03-13 11:47:52 +0000] [24685] [INFO] Worker exiting (pid: 24685)
+[2020-03-13 11:47:52 +0000] [24668] [INFO] Worker exiting (pid: 24668)
+[2020-03-13 11:47:52 +0000] [24671] [INFO] Worker exiting (pid: 24671)
+[2020-03-13 11:47:52 +0000] [24665] [INFO] Worker exiting (pid: 24665)
+[2020-03-13 11:47:52 +0000] [24690] [INFO] Worker exiting (pid: 24690)
+[2020-03-13 11:47:52 +0000] [24680] [INFO] Worker exiting (pid: 24680)
+[2020-03-13 11:47:52 +0000] [24661] [INFO] Worker exiting (pid: 24661)
+[2020-03-13 11:47:52 +0000] [24684] [INFO] Worker exiting (pid: 24684)
+[2020-03-13 11:47:52 +0000] [24663] [INFO] Worker exiting (pid: 24663)
+[2020-03-13 11:47:52 +0000] [24675] [INFO] Worker exiting (pid: 24675)
+[2020-03-13 11:47:52 +0000] [24672] [INFO] Worker exiting (pid: 24672)
+[2020-03-13 11:47:52 +0000] [24674] [INFO] Worker exiting (pid: 24674)
+[2020-03-13 11:47:52 +0000] [24689] [INFO] Worker exiting (pid: 24689)
+[2020-03-13 11:47:52 +0000] [24687] [INFO] Worker exiting (pid: 24687)
+[2020-03-13 11:47:52 +0000] [24677] [INFO] Worker exiting (pid: 24677)
+[2020-03-13 17:17:53 +0530] [24535] [INFO] Shutting down: Master
+Starting codingclubiitg as coding-club
+[2020-03-13 17:17:53 +0530] [27832] [DEBUG] Current configuration:
+  config: None
+  bind: ['unix:/webapps/codingclubiitg/run/gunicorn.sock']
+  backlog: 2048
+  workers: 97
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /webapps/codingclubiitg
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1001
+  group: 999
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: -
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: codingclubiitg
+  default_proc_name: mysite.wsgi:application
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f5b13fbe840>
+  on_reload: <function OnReload.on_reload at 0x7f5b13fbe950>
+  when_ready: <function WhenReady.when_ready at 0x7f5b13fbea60>
+  pre_fork: <function Prefork.pre_fork at 0x7f5b13fbeb70>
+  post_fork: <function Postfork.post_fork at 0x7f5b13fbec80>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f5b13fbed90>
+  worker_int: <function WorkerInt.worker_int at 0x7f5b13fbeea0>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f5b13fd5048>
+  pre_exec: <function PreExec.pre_exec at 0x7f5b13fd5158>
+  pre_request: <function PreRequest.pre_request at 0x7f5b13fd5268>
+  post_request: <function PostRequest.post_request at 0x7f5b13fd52f0>
+  child_exit: <function ChildExit.child_exit at 0x7f5b13fd5400>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f5b13fd5510>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f5b13fd5620>
+  on_exit: <function OnExit.on_exit at 0x7f5b13fd5730>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2020-03-13 17:17:53 +0530] [27832] [INFO] Starting gunicorn 20.0.4
+[2020-03-13 17:17:53 +0530] [27832] [DEBUG] Arbiter booted
+[2020-03-13 17:17:53 +0530] [27832] [INFO] Listening at: unix:/webapps/codingclubiitg/run/gunicorn.sock (27832)
+[2020-03-13 17:17:53 +0530] [27832] [INFO] Using worker: sync
+[2020-03-13 17:17:53 +0530] [27839] [INFO] Booting worker with pid: 27839
+[2020-03-13 17:17:53 +0530] [27840] [INFO] Booting worker with pid: 27840
+[2020-03-13 17:17:53 +0530] [27841] [INFO] Booting worker with pid: 27841
+[2020-03-13 17:17:54 +0530] [27842] [INFO] Booting worker with pid: 27842
+[2020-03-13 17:17:54 +0530] [27843] [INFO] Booting worker with pid: 27843
+[2020-03-13 17:17:54 +0530] [27844] [INFO] Booting worker with pid: 27844
+[2020-03-13 17:17:54 +0530] [27845] [INFO] Booting worker with pid: 27845
+[2020-03-13 17:17:54 +0530] [27846] [INFO] Booting worker with pid: 27846
+[2020-03-13 17:17:54 +0530] [27847] [INFO] Booting worker with pid: 27847
+[2020-03-13 17:17:54 +0530] [27848] [INFO] Booting worker with pid: 27848
+[2020-03-13 17:17:54 +0530] [27849] [INFO] Booting worker with pid: 27849
+[2020-03-13 17:17:54 +0530] [27850] [INFO] Booting worker with pid: 27850
+[2020-03-13 17:17:54 +0530] [27851] [INFO] Booting worker with pid: 27851
+[2020-03-13 17:17:54 +0530] [27852] [INFO] Booting worker with pid: 27852
+[2020-03-13 17:17:54 +0530] [27853] [INFO] Booting worker with pid: 27853
+[2020-03-13 17:17:54 +0530] [27854] [INFO] Booting worker with pid: 27854
+[2020-03-13 17:17:54 +0530] [27855] [INFO] Booting worker with pid: 27855
+[2020-03-13 17:17:54 +0530] [27856] [INFO] Booting worker with pid: 27856
+[2020-03-13 17:17:54 +0530] [27857] [INFO] Booting worker with pid: 27857
+[2020-03-13 17:17:54 +0530] [27858] [INFO] Booting worker with pid: 27858
+[2020-03-13 17:17:54 +0530] [27859] [INFO] Booting worker with pid: 27859
+[2020-03-13 17:17:55 +0530] [27860] [INFO] Booting worker with pid: 27860
+[2020-03-13 17:17:55 +0530] [27861] [INFO] Booting worker with pid: 27861
+[2020-03-13 17:17:55 +0530] [27862] [INFO] Booting worker with pid: 27862
+[2020-03-13 17:17:55 +0530] [27863] [INFO] Booting worker with pid: 27863
+[2020-03-13 17:17:55 +0530] [27864] [INFO] Booting worker with pid: 27864
+[2020-03-13 17:17:55 +0530] [27865] [INFO] Booting worker with pid: 27865
+[2020-03-13 17:17:55 +0530] [27866] [INFO] Booting worker with pid: 27866
+[2020-03-13 17:17:55 +0530] [27867] [INFO] Booting worker with pid: 27867
+[2020-03-13 17:17:55 +0530] [27868] [INFO] Booting worker with pid: 27868
+[2020-03-13 17:17:55 +0530] [27869] [INFO] Booting worker with pid: 27869
+[2020-03-13 17:17:55 +0530] [27870] [INFO] Booting worker with pid: 27870
+[2020-03-13 17:17:55 +0530] [27871] [INFO] Booting worker with pid: 27871
+[2020-03-13 17:17:55 +0530] [27874] [INFO] Booting worker with pid: 27874
+[2020-03-13 17:17:55 +0530] [27875] [INFO] Booting worker with pid: 27875
+[2020-03-13 17:17:55 +0530] [27876] [INFO] Booting worker with pid: 27876
+[2020-03-13 17:17:55 +0530] [27877] [INFO] Booting worker with pid: 27877
+[2020-03-13 17:17:55 +0530] [27878] [INFO] Booting worker with pid: 27878
+[2020-03-13 17:17:55 +0530] [27879] [INFO] Booting worker with pid: 27879
+[2020-03-13 17:17:56 +0530] [27880] [INFO] Booting worker with pid: 27880
+[2020-03-13 17:17:56 +0530] [27881] [INFO] Booting worker with pid: 27881
+[2020-03-13 17:17:56 +0530] [27882] [INFO] Booting worker with pid: 27882
+[2020-03-13 17:17:56 +0530] [27883] [INFO] Booting worker with pid: 27883
+[2020-03-13 17:17:56 +0530] [27884] [INFO] Booting worker with pid: 27884
+[2020-03-13 17:17:56 +0530] [27885] [INFO] Booting worker with pid: 27885
+[2020-03-13 17:17:56 +0530] [27886] [INFO] Booting worker with pid: 27886
+[2020-03-13 17:17:56 +0530] [27887] [INFO] Booting worker with pid: 27887
+[2020-03-13 17:17:56 +0530] [27888] [INFO] Booting worker with pid: 27888
+[2020-03-13 17:17:56 +0530] [27889] [INFO] Booting worker with pid: 27889
+[2020-03-13 17:17:56 +0530] [27890] [INFO] Booting worker with pid: 27890
+[2020-03-13 17:17:56 +0530] [27891] [INFO] Booting worker with pid: 27891
+[2020-03-13 17:17:56 +0530] [27892] [INFO] Booting worker with pid: 27892
+[2020-03-13 17:17:56 +0530] [27893] [INFO] Booting worker with pid: 27893
+[2020-03-13 17:17:56 +0530] [27894] [INFO] Booting worker with pid: 27894
+[2020-03-13 17:17:56 +0530] [27895] [INFO] Booting worker with pid: 27895
+[2020-03-13 17:17:56 +0530] [27896] [INFO] Booting worker with pid: 27896
+[2020-03-13 17:17:57 +0530] [27897] [INFO] Booting worker with pid: 27897
+[2020-03-13 17:17:57 +0530] [27898] [INFO] Booting worker with pid: 27898
+[2020-03-13 17:17:57 +0530] [27899] [INFO] Booting worker with pid: 27899
+[2020-03-13 17:17:57 +0530] [27901] [INFO] Booting worker with pid: 27901
+[2020-03-13 17:17:57 +0530] [27902] [INFO] Booting worker with pid: 27902
+[2020-03-13 17:17:57 +0530] [27903] [INFO] Booting worker with pid: 27903
+[2020-03-13 17:17:57 +0530] [27904] [INFO] Booting worker with pid: 27904
+[2020-03-13 17:17:57 +0530] [27912] [INFO] Booting worker with pid: 27912
+[2020-03-13 17:17:57 +0530] [27956] [INFO] Booting worker with pid: 27956
+[2020-03-13 17:17:57 +0530] [27966] [INFO] Booting worker with pid: 27966
+[2020-03-13 17:17:57 +0530] [27967] [INFO] Booting worker with pid: 27967
+[2020-03-13 17:17:57 +0530] [27968] [INFO] Booting worker with pid: 27968
+[2020-03-13 17:17:57 +0530] [27969] [INFO] Booting worker with pid: 27969
+[2020-03-13 17:17:57 +0530] [27970] [INFO] Booting worker with pid: 27970
+[2020-03-13 17:17:57 +0530] [27971] [INFO] Booting worker with pid: 27971
+[2020-03-13 17:17:57 +0530] [27972] [INFO] Booting worker with pid: 27972
+[2020-03-13 17:17:57 +0530] [27973] [INFO] Booting worker with pid: 27973
+[2020-03-13 17:17:57 +0530] [27975] [INFO] Booting worker with pid: 27975
+[2020-03-13 17:17:57 +0530] [27976] [INFO] Booting worker with pid: 27976
+[2020-03-13 17:17:58 +0530] [27977] [INFO] Booting worker with pid: 27977
+[2020-03-13 17:17:58 +0530] [27978] [INFO] Booting worker with pid: 27978
+[2020-03-13 17:17:58 +0530] [27979] [INFO] Booting worker with pid: 27979
+[2020-03-13 17:17:58 +0530] [27980] [INFO] Booting worker with pid: 27980
+[2020-03-13 17:17:58 +0530] [27981] [INFO] Booting worker with pid: 27981
+[2020-03-13 17:17:58 +0530] [27982] [INFO] Booting worker with pid: 27982
+[2020-03-13 17:17:58 +0530] [27983] [INFO] Booting worker with pid: 27983
+[2020-03-13 17:17:58 +0530] [27984] [INFO] Booting worker with pid: 27984
+[2020-03-13 17:17:58 +0530] [27985] [INFO] Booting worker with pid: 27985
+[2020-03-13 17:17:58 +0530] [27986] [INFO] Booting worker with pid: 27986
+[2020-03-13 17:17:58 +0530] [27987] [INFO] Booting worker with pid: 27987
+[2020-03-13 17:17:58 +0530] [27988] [INFO] Booting worker with pid: 27988
+[2020-03-13 17:17:58 +0530] [27989] [INFO] Booting worker with pid: 27989
+[2020-03-13 17:17:58 +0530] [27990] [INFO] Booting worker with pid: 27990
+[2020-03-13 17:17:58 +0530] [27991] [INFO] Booting worker with pid: 27991
+[2020-03-13 17:17:58 +0530] [27992] [INFO] Booting worker with pid: 27992
+[2020-03-13 17:17:58 +0530] [27993] [INFO] Booting worker with pid: 27993
+[2020-03-13 17:17:58 +0530] [27994] [INFO] Booting worker with pid: 27994
+[2020-03-13 17:17:58 +0530] [27995] [INFO] Booting worker with pid: 27995
+[2020-03-13 17:17:58 +0530] [27996] [INFO] Booting worker with pid: 27996
+[2020-03-13 17:17:58 +0530] [27997] [INFO] Booting worker with pid: 27997
+[2020-03-13 17:17:59 +0530] [27998] [INFO] Booting worker with pid: 27998
+[2020-03-13 17:17:59 +0530] [27832] [DEBUG] 97 workers
+[2020-03-13 11:48:02 +0000] [27886] [DEBUG] GET /
+[2020-03-13 11:48:08 +0000] [27973] [DEBUG] GET /events/
+[2020-03-13 11:48:09 +0000] [27848] [DEBUG] GET /events/images/ico/favicon.ico
+Not Found: /events/images/ico/favicon.ico
+[2020-03-13 11:48:12 +0000] [27895] [DEBUG] GET /projects/
+[2020-03-13 11:48:12 +0000] [27862] [DEBUG] GET /projects/images/ico/favicon.ico
+Not Found: /projects/images/ico/favicon.ico
+[2020-03-13 11:48:15 +0000] [27860] [DEBUG] GET /events/
+[2020-03-13 11:48:16 +0000] [27857] [DEBUG] GET /aboutus/
+[2020-03-13 11:48:17 +0000] [27862] [DEBUG] GET /aboutus/images/ico/favicon.ico
+Not Found: /aboutus/images/ico/favicon.ico
+[2020-03-13 11:48:20 +0000] [27992] [DEBUG] GET /
+[2020-03-13 11:48:23 +0000] [27862] [DEBUG] GET /aboutus/
+[2020-03-13 11:48:25 +0000] [27841] [DEBUG] GET /events/
+[2020-03-13 11:48:26 +0000] [27979] [DEBUG] GET /projects/
+[2020-03-13 11:48:27 +0000] [27864] [DEBUG] GET /register/
+[2020-03-13 11:48:28 +0000] [27840] [DEBUG] GET /register/images/ico/favicon.ico
+Not Found: /register/images/ico/favicon.ico
+[2020-03-13 11:48:29 +0000] [27971] [DEBUG] GET /projects/
+[2020-03-13 11:48:30 +0000] [27870] [DEBUG] GET /events/
+[2020-03-13 11:48:32 +0000] [27869] [DEBUG] GET /aboutus/
+[2020-03-13 11:48:32 +0000] [27869] [DEBUG] GET /
+[2020-03-13 17:20:15 +0530] [27832] [INFO] Handling signal: term
+[2020-03-13 11:50:15 +0000] [27845] [INFO] Worker exiting (pid: 27845)
+[2020-03-13 11:50:15 +0000] [27841] [INFO] Worker exiting (pid: 27841)
+[2020-03-13 11:50:15 +0000] [27848] [INFO] Worker exiting (pid: 27848)
+[2020-03-13 11:50:15 +0000] [27840] [INFO] Worker exiting (pid: 27840)
+[2020-03-13 11:50:15 +0000] [27843] [INFO] Worker exiting (pid: 27843)
+[2020-03-13 11:50:15 +0000] [27842] [INFO] Worker exiting (pid: 27842)
+[2020-03-13 11:50:15 +0000] [27847] [INFO] Worker exiting (pid: 27847)
+[2020-03-13 11:50:15 +0000] [27844] [INFO] Worker exiting (pid: 27844)
+[2020-03-13 11:50:15 +0000] [27839] [INFO] Worker exiting (pid: 27839)
+[2020-03-13 11:50:15 +0000] [27857] [INFO] Worker exiting (pid: 27857)
+[2020-03-13 11:50:15 +0000] [27849] [INFO] Worker exiting (pid: 27849)
+[2020-03-13 11:50:15 +0000] [27855] [INFO] Worker exiting (pid: 27855)
+[2020-03-13 11:50:15 +0000] [27852] [INFO] Worker exiting (pid: 27852)
+[2020-03-13 11:50:15 +0000] [27846] [INFO] Worker exiting (pid: 27846)
+[2020-03-13 11:50:15 +0000] [27854] [INFO] Worker exiting (pid: 27854)
+[2020-03-13 11:50:15 +0000] [27851] [INFO] Worker exiting (pid: 27851)
+[2020-03-13 11:50:15 +0000] [27853] [INFO] Worker exiting (pid: 27853)
+[2020-03-13 11:50:15 +0000] [27850] [INFO] Worker exiting (pid: 27850)
+[2020-03-13 11:50:15 +0000] [27860] [INFO] Worker exiting (pid: 27860)
+[2020-03-13 11:50:15 +0000] [27856] [INFO] Worker exiting (pid: 27856)
+[2020-03-13 11:50:15 +0000] [27861] [INFO] Worker exiting (pid: 27861)
+[2020-03-13 11:50:15 +0000] [27859] [INFO] Worker exiting (pid: 27859)
+[2020-03-13 11:50:15 +0000] [27858] [INFO] Worker exiting (pid: 27858)
+[2020-03-13 11:50:15 +0000] [27876] [INFO] Worker exiting (pid: 27876)
+[2020-03-13 11:50:15 +0000] [27868] [INFO] Worker exiting (pid: 27868)
+[2020-03-13 11:50:15 +0000] [27877] [INFO] Worker exiting (pid: 27877)
+[2020-03-13 11:50:15 +0000] [27888] [INFO] Worker exiting (pid: 27888)
+[2020-03-13 11:50:15 +0000] [27884] [INFO] Worker exiting (pid: 27884)
+[2020-03-13 11:50:15 +0000] [27865] [INFO] Worker exiting (pid: 27865)
+[2020-03-13 11:50:15 +0000] [27890] [INFO] Worker exiting (pid: 27890)
+[2020-03-13 11:50:15 +0000] [27894] [INFO] Worker exiting (pid: 27894)
+[2020-03-13 11:50:15 +0000] [27904] [INFO] Worker exiting (pid: 27904)
+[2020-03-13 11:50:15 +0000] [27968] [INFO] Worker exiting (pid: 27968)
+[2020-03-13 11:50:15 +0000] [27862] [INFO] Worker exiting (pid: 27862)
+[2020-03-13 11:50:15 +0000] [27866] [INFO] Worker exiting (pid: 27866)
+[2020-03-13 11:50:15 +0000] [27863] [INFO] Worker exiting (pid: 27863)
+[2020-03-13 11:50:15 +0000] [27867] [INFO] Worker exiting (pid: 27867)
+[2020-03-13 11:50:15 +0000] [27879] [INFO] Worker exiting (pid: 27879)
+[2020-03-13 11:50:15 +0000] [27878] [INFO] Worker exiting (pid: 27878)
+[2020-03-13 11:50:15 +0000] [27896] [INFO] Worker exiting (pid: 27896)
+[2020-03-13 11:50:15 +0000] [27891] [INFO] Worker exiting (pid: 27891)
+[2020-03-13 11:50:15 +0000] [27883] [INFO] Worker exiting (pid: 27883)
+[2020-03-13 11:50:15 +0000] [27966] [INFO] Worker exiting (pid: 27966)
+[2020-03-13 11:50:15 +0000] [27893] [INFO] Worker exiting (pid: 27893)
+[2020-03-13 11:50:15 +0000] [27956] [INFO] Worker exiting (pid: 27956)
+[2020-03-13 11:50:15 +0000] [27967] [INFO] Worker exiting (pid: 27967)
+[2020-03-13 11:50:15 +0000] [27897] [INFO] Worker exiting (pid: 27897)
+[2020-03-13 11:50:15 +0000] [27898] [INFO] Worker exiting (pid: 27898)
+[2020-03-13 11:50:15 +0000] [27901] [INFO] Worker exiting (pid: 27901)
+[2020-03-13 11:50:15 +0000] [27869] [INFO] Worker exiting (pid: 27869)
+[2020-03-13 11:50:15 +0000] [27895] [INFO] Worker exiting (pid: 27895)
+[2020-03-13 11:50:15 +0000] [27889] [INFO] Worker exiting (pid: 27889)
+[2020-03-13 11:50:15 +0000] [27875] [INFO] Worker exiting (pid: 27875)
+[2020-03-13 11:50:15 +0000] [27912] [INFO] Worker exiting (pid: 27912)
+[2020-03-13 11:50:15 +0000] [27881] [INFO] Worker exiting (pid: 27881)
+[2020-03-13 11:50:15 +0000] [27892] [INFO] Worker exiting (pid: 27892)
+[2020-03-13 11:50:15 +0000] [27880] [INFO] Worker exiting (pid: 27880)
+[2020-03-13 11:50:15 +0000] [27886] [INFO] Worker exiting (pid: 27886)
+[2020-03-13 11:50:15 +0000] [27882] [INFO] Worker exiting (pid: 27882)
+[2020-03-13 11:50:15 +0000] [27887] [INFO] Worker exiting (pid: 27887)
+[2020-03-13 11:50:15 +0000] [27871] [INFO] Worker exiting (pid: 27871)
+[2020-03-13 11:50:15 +0000] [27864] [INFO] Worker exiting (pid: 27864)
+[2020-03-13 11:50:15 +0000] [27874] [INFO] Worker exiting (pid: 27874)
+[2020-03-13 11:50:15 +0000] [27970] [INFO] Worker exiting (pid: 27970)
+[2020-03-13 11:50:15 +0000] [27971] [INFO] Worker exiting (pid: 27971)
+[2020-03-13 11:50:15 +0000] [27870] [INFO] Worker exiting (pid: 27870)
+[2020-03-13 11:50:15 +0000] [27969] [INFO] Worker exiting (pid: 27969)
+[2020-03-13 11:50:15 +0000] [27885] [INFO] Worker exiting (pid: 27885)
+[2020-03-13 11:50:15 +0000] [27903] [INFO] Worker exiting (pid: 27903)
+[2020-03-13 11:50:15 +0000] [27899] [INFO] Worker exiting (pid: 27899)
+[2020-03-13 11:50:15 +0000] [27902] [INFO] Worker exiting (pid: 27902)
+[2020-03-13 11:50:15 +0000] [27972] [INFO] Worker exiting (pid: 27972)
+[2020-03-13 11:50:15 +0000] [27976] [INFO] Worker exiting (pid: 27976)
+[2020-03-13 11:50:15 +0000] [27978] [INFO] Worker exiting (pid: 27978)
+[2020-03-13 11:50:15 +0000] [27979] [INFO] Worker exiting (pid: 27979)
+[2020-03-13 11:50:15 +0000] [27982] [INFO] Worker exiting (pid: 27982)
+[2020-03-13 11:50:15 +0000] [27980] [INFO] Worker exiting (pid: 27980)
+[2020-03-13 11:50:15 +0000] [27977] [INFO] Worker exiting (pid: 27977)
+[2020-03-13 11:50:15 +0000] [27973] [INFO] Worker exiting (pid: 27973)
+[2020-03-13 11:50:15 +0000] [27975] [INFO] Worker exiting (pid: 27975)
+[2020-03-13 11:50:15 +0000] [27983] [INFO] Worker exiting (pid: 27983)
+[2020-03-13 11:50:15 +0000] [27981] [INFO] Worker exiting (pid: 27981)
+[2020-03-13 11:50:15 +0000] [27993] [INFO] Worker exiting (pid: 27993)
+[2020-03-13 11:50:15 +0000] [27986] [INFO] Worker exiting (pid: 27986)
+[2020-03-13 11:50:15 +0000] [27989] [INFO] Worker exiting (pid: 27989)
+[2020-03-13 11:50:15 +0000] [27984] [INFO] Worker exiting (pid: 27984)
+[2020-03-13 11:50:15 +0000] [27995] [INFO] Worker exiting (pid: 27995)
+[2020-03-13 11:50:15 +0000] [27996] [INFO] Worker exiting (pid: 27996)
+[2020-03-13 11:50:15 +0000] [27987] [INFO] Worker exiting (pid: 27987)
+[2020-03-13 11:50:15 +0000] [27985] [INFO] Worker exiting (pid: 27985)
+[2020-03-13 11:50:15 +0000] [27988] [INFO] Worker exiting (pid: 27988)
+[2020-03-13 11:50:15 +0000] [27992] [INFO] Worker exiting (pid: 27992)
+[2020-03-13 11:50:15 +0000] [27997] [INFO] Worker exiting (pid: 27997)
+[2020-03-13 11:50:15 +0000] [27991] [INFO] Worker exiting (pid: 27991)
+[2020-03-13 11:50:15 +0000] [27994] [INFO] Worker exiting (pid: 27994)
+[2020-03-13 11:50:15 +0000] [27998] [INFO] Worker exiting (pid: 27998)
+[2020-03-13 11:50:15 +0000] [27990] [INFO] Worker exiting (pid: 27990)
+[2020-03-13 17:20:16 +0530] [27832] [INFO] Shutting down: Master
+Starting codingclubiitg as coding-club
+[2020-03-13 17:20:17 +0530] [28373] [DEBUG] Current configuration:
+  config: None
+  bind: ['unix:/webapps/codingclubiitg/run/gunicorn.sock']
+  backlog: 2048
+  workers: 97
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /webapps/codingclubiitg
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1001
+  group: 999
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: -
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: codingclubiitg
+  default_proc_name: mysite.wsgi:application
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7ff57e0b0840>
+  on_reload: <function OnReload.on_reload at 0x7ff57e0b0950>
+  when_ready: <function WhenReady.when_ready at 0x7ff57e0b0a60>
+  pre_fork: <function Prefork.pre_fork at 0x7ff57e0b0b70>
+  post_fork: <function Postfork.post_fork at 0x7ff57e0b0c80>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7ff57e0b0d90>
+  worker_int: <function WorkerInt.worker_int at 0x7ff57e0b0ea0>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7ff57e0c7048>
+  pre_exec: <function PreExec.pre_exec at 0x7ff57e0c7158>
+  pre_request: <function PreRequest.pre_request at 0x7ff57e0c7268>
+  post_request: <function PostRequest.post_request at 0x7ff57e0c72f0>
+  child_exit: <function ChildExit.child_exit at 0x7ff57e0c7400>
+  worker_exit: <function WorkerExit.worker_exit at 0x7ff57e0c7510>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7ff57e0c7620>
+  on_exit: <function OnExit.on_exit at 0x7ff57e0c7730>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2020-03-13 17:20:17 +0530] [28373] [INFO] Starting gunicorn 20.0.4
+[2020-03-13 17:20:17 +0530] [28373] [DEBUG] Arbiter booted
+[2020-03-13 17:20:17 +0530] [28373] [INFO] Listening at: unix:/webapps/codingclubiitg/run/gunicorn.sock (28373)
+[2020-03-13 17:20:17 +0530] [28373] [INFO] Using worker: sync
+[2020-03-13 17:20:17 +0530] [28380] [INFO] Booting worker with pid: 28380
+[2020-03-13 17:20:17 +0530] [28381] [INFO] Booting worker with pid: 28381
+[2020-03-13 17:20:17 +0530] [28382] [INFO] Booting worker with pid: 28382
+[2020-03-13 17:20:17 +0530] [28383] [INFO] Booting worker with pid: 28383
+[2020-03-13 17:20:17 +0530] [28384] [INFO] Booting worker with pid: 28384
+[2020-03-13 17:20:17 +0530] [28385] [INFO] Booting worker with pid: 28385
+[2020-03-13 17:20:17 +0530] [28386] [INFO] Booting worker with pid: 28386
+[2020-03-13 17:20:17 +0530] [28387] [INFO] Booting worker with pid: 28387
+[2020-03-13 17:20:17 +0530] [28388] [INFO] Booting worker with pid: 28388
+[2020-03-13 17:20:17 +0530] [28389] [INFO] Booting worker with pid: 28389
+[2020-03-13 17:20:17 +0530] [28390] [INFO] Booting worker with pid: 28390
+[2020-03-13 17:20:17 +0530] [28391] [INFO] Booting worker with pid: 28391
+[2020-03-13 17:20:17 +0530] [28392] [INFO] Booting worker with pid: 28392
+[2020-03-13 17:20:17 +0530] [28393] [INFO] Booting worker with pid: 28393
+[2020-03-13 17:20:17 +0530] [28394] [INFO] Booting worker with pid: 28394
+[2020-03-13 17:20:17 +0530] [28395] [INFO] Booting worker with pid: 28395
+[2020-03-13 17:20:17 +0530] [28396] [INFO] Booting worker with pid: 28396
+[2020-03-13 17:20:17 +0530] [28397] [INFO] Booting worker with pid: 28397
+[2020-03-13 17:20:17 +0530] [28398] [INFO] Booting worker with pid: 28398
+[2020-03-13 17:20:17 +0530] [28399] [INFO] Booting worker with pid: 28399
+[2020-03-13 17:20:17 +0530] [28400] [INFO] Booting worker with pid: 28400
+[2020-03-13 17:20:17 +0530] [28401] [INFO] Booting worker with pid: 28401
+[2020-03-13 17:20:18 +0530] [28402] [INFO] Booting worker with pid: 28402
+[2020-03-13 17:20:18 +0530] [28403] [INFO] Booting worker with pid: 28403
+[2020-03-13 17:20:18 +0530] [28404] [INFO] Booting worker with pid: 28404
+[2020-03-13 17:20:18 +0530] [28405] [INFO] Booting worker with pid: 28405
+[2020-03-13 17:20:18 +0530] [28406] [INFO] Booting worker with pid: 28406
+[2020-03-13 17:20:18 +0530] [28407] [INFO] Booting worker with pid: 28407
+[2020-03-13 17:20:18 +0530] [28408] [INFO] Booting worker with pid: 28408
+[2020-03-13 17:20:18 +0530] [28409] [INFO] Booting worker with pid: 28409
+[2020-03-13 17:20:18 +0530] [28410] [INFO] Booting worker with pid: 28410
+[2020-03-13 17:20:18 +0530] [28411] [INFO] Booting worker with pid: 28411
+[2020-03-13 17:20:18 +0530] [28412] [INFO] Booting worker with pid: 28412
+[2020-03-13 17:20:18 +0530] [28413] [INFO] Booting worker with pid: 28413
+[2020-03-13 17:20:18 +0530] [28414] [INFO] Booting worker with pid: 28414
+[2020-03-13 17:20:18 +0530] [28415] [INFO] Booting worker with pid: 28415
+[2020-03-13 17:20:18 +0530] [28416] [INFO] Booting worker with pid: 28416
+[2020-03-13 17:20:18 +0530] [28417] [INFO] Booting worker with pid: 28417
+[2020-03-13 17:20:18 +0530] [28418] [INFO] Booting worker with pid: 28418
+[2020-03-13 17:20:18 +0530] [28419] [INFO] Booting worker with pid: 28419
+[2020-03-13 17:20:18 +0530] [28420] [INFO] Booting worker with pid: 28420
+[2020-03-13 17:20:18 +0530] [28421] [INFO] Booting worker with pid: 28421
+[2020-03-13 17:20:18 +0530] [28422] [INFO] Booting worker with pid: 28422
+[2020-03-13 17:20:18 +0530] [28423] [INFO] Booting worker with pid: 28423
+[2020-03-13 17:20:19 +0530] [28424] [INFO] Booting worker with pid: 28424
+[2020-03-13 17:20:19 +0530] [28425] [INFO] Booting worker with pid: 28425
+[2020-03-13 17:20:19 +0530] [28426] [INFO] Booting worker with pid: 28426
+[2020-03-13 17:20:19 +0530] [28427] [INFO] Booting worker with pid: 28427
+[2020-03-13 17:20:19 +0530] [28428] [INFO] Booting worker with pid: 28428
+[2020-03-13 17:20:19 +0530] [28429] [INFO] Booting worker with pid: 28429
+[2020-03-13 17:20:19 +0530] [28430] [INFO] Booting worker with pid: 28430
+[2020-03-13 17:20:19 +0530] [28431] [INFO] Booting worker with pid: 28431
+[2020-03-13 17:20:19 +0530] [28432] [INFO] Booting worker with pid: 28432
+[2020-03-13 17:20:19 +0530] [28433] [INFO] Booting worker with pid: 28433
+[2020-03-13 17:20:19 +0530] [28434] [INFO] Booting worker with pid: 28434
+[2020-03-13 17:20:19 +0530] [28435] [INFO] Booting worker with pid: 28435
+[2020-03-13 17:20:19 +0530] [28436] [INFO] Booting worker with pid: 28436
+[2020-03-13 17:20:19 +0530] [28437] [INFO] Booting worker with pid: 28437
+[2020-03-13 17:20:19 +0530] [28438] [INFO] Booting worker with pid: 28438
+[2020-03-13 17:20:19 +0530] [28439] [INFO] Booting worker with pid: 28439
+[2020-03-13 17:20:19 +0530] [28440] [INFO] Booting worker with pid: 28440
+[2020-03-13 17:20:19 +0530] [28450] [INFO] Booting worker with pid: 28450
+[2020-03-13 17:20:19 +0530] [28501] [INFO] Booting worker with pid: 28501
+[2020-03-13 17:20:19 +0530] [28502] [INFO] Booting worker with pid: 28502
+[2020-03-13 17:20:19 +0530] [28503] [INFO] Booting worker with pid: 28503
+[2020-03-13 17:20:19 +0530] [28504] [INFO] Booting worker with pid: 28504
+[2020-03-13 17:20:20 +0530] [28505] [INFO] Booting worker with pid: 28505
+[2020-03-13 17:20:20 +0530] [28506] [INFO] Booting worker with pid: 28506
+[2020-03-13 17:20:20 +0530] [28507] [INFO] Booting worker with pid: 28507
+[2020-03-13 17:20:20 +0530] [28508] [INFO] Booting worker with pid: 28508
+[2020-03-13 17:20:20 +0530] [28509] [INFO] Booting worker with pid: 28509
+[2020-03-13 17:20:20 +0530] [28510] [INFO] Booting worker with pid: 28510
+[2020-03-13 17:20:20 +0530] [28511] [INFO] Booting worker with pid: 28511
+[2020-03-13 17:20:20 +0530] [28512] [INFO] Booting worker with pid: 28512
+[2020-03-13 17:20:20 +0530] [28513] [INFO] Booting worker with pid: 28513
+[2020-03-13 17:20:20 +0530] [28514] [INFO] Booting worker with pid: 28514
+[2020-03-13 17:20:20 +0530] [28515] [INFO] Booting worker with pid: 28515
+[2020-03-13 17:20:20 +0530] [28516] [INFO] Booting worker with pid: 28516
+[2020-03-13 17:20:20 +0530] [28517] [INFO] Booting worker with pid: 28517
+[2020-03-13 17:20:20 +0530] [28518] [INFO] Booting worker with pid: 28518
+[2020-03-13 17:20:20 +0530] [28519] [INFO] Booting worker with pid: 28519
+[2020-03-13 17:20:20 +0530] [28520] [INFO] Booting worker with pid: 28520
+[2020-03-13 17:20:20 +0530] [28521] [INFO] Booting worker with pid: 28521
+[2020-03-13 17:20:20 +0530] [28522] [INFO] Booting worker with pid: 28522
+[2020-03-13 17:20:20 +0530] [28523] [INFO] Booting worker with pid: 28523
+[2020-03-13 17:20:20 +0530] [28524] [INFO] Booting worker with pid: 28524
+[2020-03-13 17:20:20 +0530] [28525] [INFO] Booting worker with pid: 28525
+[2020-03-13 17:20:21 +0530] [28526] [INFO] Booting worker with pid: 28526
+[2020-03-13 17:20:21 +0530] [28527] [INFO] Booting worker with pid: 28527
+[2020-03-13 17:20:21 +0530] [28528] [INFO] Booting worker with pid: 28528
+[2020-03-13 17:20:21 +0530] [28529] [INFO] Booting worker with pid: 28529
+[2020-03-13 17:20:21 +0530] [28530] [INFO] Booting worker with pid: 28530
+[2020-03-13 17:20:21 +0530] [28531] [INFO] Booting worker with pid: 28531
+[2020-03-13 17:20:21 +0530] [28532] [INFO] Booting worker with pid: 28532
+[2020-03-13 17:20:21 +0530] [28533] [INFO] Booting worker with pid: 28533
+[2020-03-13 17:20:21 +0530] [28534] [INFO] Booting worker with pid: 28534
+[2020-03-13 17:20:21 +0530] [28535] [INFO] Booting worker with pid: 28535
+[2020-03-13 17:20:21 +0530] [28373] [DEBUG] 97 workers
+[2020-03-13 11:50:21 +0000] [28524] [DEBUG] GET /
+Not Found: /
+[2020-03-13 11:50:28 +0000] [28424] [DEBUG] GET /codingclubiitg
+[2020-03-13 11:52:31 +0000] [28413] [DEBUG] GET /codingclubiitgevents/
+[2020-03-13 11:52:31 +0000] [28395] [DEBUG] GET /codingclubiitgevents/images/ico/favicon.ico
+Not Found: /codingclubiitgevents/images/ico/favicon.ico
+[2020-03-13 11:52:33 +0000] [28501] [DEBUG] GET /codingclubiitgprojects/
+[2020-03-13 11:52:34 +0000] [28412] [DEBUG] GET /codingclubiitgprojects/images/ico/favicon.ico
+Not Found: /codingclubiitgprojects/images/ico/favicon.ico
+[2020-03-13 11:52:35 +0000] [28506] [DEBUG] GET /codingclubiitgevents/
+[2020-03-13 11:52:36 +0000] [28527] [DEBUG] GET /codingclubiitgaboutus/
+[2020-03-13 11:52:36 +0000] [28398] [DEBUG] GET /codingclubiitgaboutus/images/ico/favicon.ico
+Not Found: /codingclubiitgaboutus/images/ico/favicon.ico
+[2020-03-13 17:23:04 +0530] [28373] [INFO] Handling signal: term
+[2020-03-13 11:53:04 +0000] [28381] [INFO] Worker exiting (pid: 28381)
+[2020-03-13 11:53:04 +0000] [28384] [INFO] Worker exiting (pid: 28384)
+[2020-03-13 11:53:04 +0000] [28395] [INFO] Worker exiting (pid: 28395)
+[2020-03-13 11:53:04 +0000] [28382] [INFO] Worker exiting (pid: 28382)
+[2020-03-13 11:53:04 +0000] [28385] [INFO] Worker exiting (pid: 28385)
+[2020-03-13 11:53:04 +0000] [28387] [INFO] Worker exiting (pid: 28387)
+[2020-03-13 11:53:04 +0000] [28380] [INFO] Worker exiting (pid: 28380)
+[2020-03-13 11:53:04 +0000] [28391] [INFO] Worker exiting (pid: 28391)
+[2020-03-13 11:53:04 +0000] [28388] [INFO] Worker exiting (pid: 28388)
+[2020-03-13 11:53:04 +0000] [28396] [INFO] Worker exiting (pid: 28396)
+[2020-03-13 11:53:04 +0000] [28398] [INFO] Worker exiting (pid: 28398)
+[2020-03-13 11:53:04 +0000] [28390] [INFO] Worker exiting (pid: 28390)
+[2020-03-13 11:53:04 +0000] [28397] [INFO] Worker exiting (pid: 28397)
+[2020-03-13 11:53:04 +0000] [28383] [INFO] Worker exiting (pid: 28383)
+[2020-03-13 11:53:04 +0000] [28394] [INFO] Worker exiting (pid: 28394)
+[2020-03-13 11:53:04 +0000] [28402] [INFO] Worker exiting (pid: 28402)
+[2020-03-13 11:53:04 +0000] [28392] [INFO] Worker exiting (pid: 28392)
+[2020-03-13 11:53:04 +0000] [28389] [INFO] Worker exiting (pid: 28389)
+[2020-03-13 11:53:04 +0000] [28405] [INFO] Worker exiting (pid: 28405)
+[2020-03-13 11:53:04 +0000] [28400] [INFO] Worker exiting (pid: 28400)
+[2020-03-13 11:53:04 +0000] [28401] [INFO] Worker exiting (pid: 28401)
+[2020-03-13 11:53:04 +0000] [28404] [INFO] Worker exiting (pid: 28404)
+[2020-03-13 11:53:04 +0000] [28412] [INFO] Worker exiting (pid: 28412)
+[2020-03-13 11:53:04 +0000] [28414] [INFO] Worker exiting (pid: 28414)
+[2020-03-13 11:53:04 +0000] [28411] [INFO] Worker exiting (pid: 28411)
+[2020-03-13 11:53:04 +0000] [28408] [INFO] Worker exiting (pid: 28408)
+[2020-03-13 11:53:04 +0000] [28410] [INFO] Worker exiting (pid: 28410)
+[2020-03-13 11:53:04 +0000] [28416] [INFO] Worker exiting (pid: 28416)
+[2020-03-13 11:53:04 +0000] [28425] [INFO] Worker exiting (pid: 28425)
+[2020-03-13 11:53:04 +0000] [28407] [INFO] Worker exiting (pid: 28407)
+[2020-03-13 11:53:04 +0000] [28418] [INFO] Worker exiting (pid: 28418)
+[2020-03-13 11:53:04 +0000] [28426] [INFO] Worker exiting (pid: 28426)
+[2020-03-13 11:53:04 +0000] [28420] [INFO] Worker exiting (pid: 28420)
+[2020-03-13 11:53:04 +0000] [28429] [INFO] Worker exiting (pid: 28429)
+[2020-03-13 11:53:04 +0000] [28424] [INFO] Worker exiting (pid: 28424)
+[2020-03-13 11:53:04 +0000] [28421] [INFO] Worker exiting (pid: 28421)
+[2020-03-13 11:53:04 +0000] [28428] [INFO] Worker exiting (pid: 28428)
+[2020-03-13 11:53:04 +0000] [28501] [INFO] Worker exiting (pid: 28501)
+[2020-03-13 11:53:04 +0000] [28505] [INFO] Worker exiting (pid: 28505)
+[2020-03-13 11:53:04 +0000] [28504] [INFO] Worker exiting (pid: 28504)
+[2020-03-13 11:53:04 +0000] [28503] [INFO] Worker exiting (pid: 28503)
+[2020-03-13 11:53:04 +0000] [28507] [INFO] Worker exiting (pid: 28507)
+[2020-03-13 11:53:04 +0000] [28508] [INFO] Worker exiting (pid: 28508)
+[2020-03-13 11:53:04 +0000] [28427] [INFO] Worker exiting (pid: 28427)
+[2020-03-13 11:53:04 +0000] [28434] [INFO] Worker exiting (pid: 28434)
+[2020-03-13 11:53:04 +0000] [28502] [INFO] Worker exiting (pid: 28502)
+[2020-03-13 11:53:04 +0000] [28439] [INFO] Worker exiting (pid: 28439)
+[2020-03-13 11:53:04 +0000] [28438] [INFO] Worker exiting (pid: 28438)
+[2020-03-13 11:53:04 +0000] [28433] [INFO] Worker exiting (pid: 28433)
+[2020-03-13 11:53:04 +0000] [28423] [INFO] Worker exiting (pid: 28423)
+[2020-03-13 11:53:04 +0000] [28431] [INFO] Worker exiting (pid: 28431)
+[2020-03-13 11:53:04 +0000] [28399] [INFO] Worker exiting (pid: 28399)
+[2020-03-13 11:53:04 +0000] [28435] [INFO] Worker exiting (pid: 28435)
+[2020-03-13 11:53:04 +0000] [28415] [INFO] Worker exiting (pid: 28415)
+[2020-03-13 11:53:04 +0000] [28436] [INFO] Worker exiting (pid: 28436)
+[2020-03-13 11:53:04 +0000] [28386] [INFO] Worker exiting (pid: 28386)
+[2020-03-13 11:53:04 +0000] [28403] [INFO] Worker exiting (pid: 28403)
+[2020-03-13 11:53:04 +0000] [28417] [INFO] Worker exiting (pid: 28417)
+[2020-03-13 11:53:04 +0000] [28409] [INFO] Worker exiting (pid: 28409)
+[2020-03-13 11:53:04 +0000] [28422] [INFO] Worker exiting (pid: 28422)
+[2020-03-13 11:53:04 +0000] [28506] [INFO] Worker exiting (pid: 28506)
+[2020-03-13 11:53:04 +0000] [28393] [INFO] Worker exiting (pid: 28393)
+[2020-03-13 11:53:04 +0000] [28450] [INFO] Worker exiting (pid: 28450)
+[2020-03-13 11:53:04 +0000] [28419] [INFO] Worker exiting (pid: 28419)
+[2020-03-13 11:53:04 +0000] [28440] [INFO] Worker exiting (pid: 28440)
+[2020-03-13 11:53:04 +0000] [28437] [INFO] Worker exiting (pid: 28437)
+[2020-03-13 11:53:04 +0000] [28406] [INFO] Worker exiting (pid: 28406)
+[2020-03-13 11:53:04 +0000] [28413] [INFO] Worker exiting (pid: 28413)
+[2020-03-13 11:53:04 +0000] [28430] [INFO] Worker exiting (pid: 28430)
+[2020-03-13 11:53:04 +0000] [28432] [INFO] Worker exiting (pid: 28432)
+[2020-03-13 11:53:04 +0000] [28509] [INFO] Worker exiting (pid: 28509)
+[2020-03-13 11:53:04 +0000] [28510] [INFO] Worker exiting (pid: 28510)
+[2020-03-13 11:53:04 +0000] [28516] [INFO] Worker exiting (pid: 28516)
+[2020-03-13 11:53:04 +0000] [28511] [INFO] Worker exiting (pid: 28511)
+[2020-03-13 11:53:04 +0000] [28514] [INFO] Worker exiting (pid: 28514)
+[2020-03-13 11:53:04 +0000] [28529] [INFO] Worker exiting (pid: 28529)
+[2020-03-13 11:53:04 +0000] [28519] [INFO] Worker exiting (pid: 28519)
+[2020-03-13 11:53:04 +0000] [28524] [INFO] Worker exiting (pid: 28524)
+[2020-03-13 11:53:04 +0000] [28523] [INFO] Worker exiting (pid: 28523)
+[2020-03-13 11:53:04 +0000] [28522] [INFO] Worker exiting (pid: 28522)
+[2020-03-13 11:53:04 +0000] [28525] [INFO] Worker exiting (pid: 28525)
+[2020-03-13 11:53:04 +0000] [28527] [INFO] Worker exiting (pid: 28527)
+[2020-03-13 11:53:04 +0000] [28532] [INFO] Worker exiting (pid: 28532)
+[2020-03-13 11:53:04 +0000] [28533] [INFO] Worker exiting (pid: 28533)
+[2020-03-13 11:53:04 +0000] [28531] [INFO] Worker exiting (pid: 28531)
+[2020-03-13 11:53:04 +0000] [28521] [INFO] Worker exiting (pid: 28521)
+[2020-03-13 11:53:04 +0000] [28515] [INFO] Worker exiting (pid: 28515)
+[2020-03-13 11:53:04 +0000] [28518] [INFO] Worker exiting (pid: 28518)
+[2020-03-13 11:53:04 +0000] [28526] [INFO] Worker exiting (pid: 28526)
+[2020-03-13 11:53:04 +0000] [28534] [INFO] Worker exiting (pid: 28534)
+[2020-03-13 11:53:04 +0000] [28513] [INFO] Worker exiting (pid: 28513)
+[2020-03-13 11:53:04 +0000] [28520] [INFO] Worker exiting (pid: 28520)
+[2020-03-13 11:53:04 +0000] [28530] [INFO] Worker exiting (pid: 28530)
+[2020-03-13 11:53:04 +0000] [28535] [INFO] Worker exiting (pid: 28535)
+[2020-03-13 11:53:04 +0000] [28512] [INFO] Worker exiting (pid: 28512)
+[2020-03-13 11:53:04 +0000] [28517] [INFO] Worker exiting (pid: 28517)
+[2020-03-13 11:53:04 +0000] [28528] [INFO] Worker exiting (pid: 28528)
+[2020-03-13 17:23:05 +0530] [28373] [INFO] Shutting down: Master
+Starting codingclubiitg as coding-club
+[2020-03-13 17:23:05 +0530] [28850] [DEBUG] Current configuration:
+  config: None
+  bind: ['unix:/webapps/codingclubiitg/run/gunicorn.sock']
+  backlog: 2048
+  workers: 97
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /webapps/codingclubiitg
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1001
+  group: 999
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: -
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: codingclubiitg
+  default_proc_name: mysite.wsgi:application
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f1965cd2840>
+  on_reload: <function OnReload.on_reload at 0x7f1965cd2950>
+  when_ready: <function WhenReady.when_ready at 0x7f1965cd2a60>
+  pre_fork: <function Prefork.pre_fork at 0x7f1965cd2b70>
+  post_fork: <function Postfork.post_fork at 0x7f1965cd2c80>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f1965cd2d90>
+  worker_int: <function WorkerInt.worker_int at 0x7f1965cd2ea0>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f1965ce9048>
+  pre_exec: <function PreExec.pre_exec at 0x7f1965ce9158>
+  pre_request: <function PreRequest.pre_request at 0x7f1965ce9268>
+  post_request: <function PostRequest.post_request at 0x7f1965ce92f0>
+  child_exit: <function ChildExit.child_exit at 0x7f1965ce9400>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f1965ce9510>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f1965ce9620>
+  on_exit: <function OnExit.on_exit at 0x7f1965ce9730>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2020-03-13 17:23:05 +0530] [28850] [INFO] Starting gunicorn 20.0.4
+[2020-03-13 17:23:05 +0530] [28850] [DEBUG] Arbiter booted
+[2020-03-13 17:23:05 +0530] [28850] [INFO] Listening at: unix:/webapps/codingclubiitg/run/gunicorn.sock (28850)
+[2020-03-13 17:23:05 +0530] [28850] [INFO] Using worker: sync
+[2020-03-13 17:23:05 +0530] [28857] [INFO] Booting worker with pid: 28857
+[2020-03-13 17:23:05 +0530] [28858] [INFO] Booting worker with pid: 28858
+[2020-03-13 17:23:05 +0530] [28859] [INFO] Booting worker with pid: 28859
+[2020-03-13 17:23:05 +0530] [28860] [INFO] Booting worker with pid: 28860
+[2020-03-13 17:23:05 +0530] [28861] [INFO] Booting worker with pid: 28861
+[2020-03-13 17:23:06 +0530] [28862] [INFO] Booting worker with pid: 28862
+[2020-03-13 17:23:06 +0530] [28863] [INFO] Booting worker with pid: 28863
+[2020-03-13 17:23:06 +0530] [28864] [INFO] Booting worker with pid: 28864
+[2020-03-13 17:23:06 +0530] [28865] [INFO] Booting worker with pid: 28865
+[2020-03-13 17:23:06 +0530] [28866] [INFO] Booting worker with pid: 28866
+[2020-03-13 17:23:06 +0530] [28867] [INFO] Booting worker with pid: 28867
+[2020-03-13 17:23:06 +0530] [28868] [INFO] Booting worker with pid: 28868
+[2020-03-13 17:23:06 +0530] [28869] [INFO] Booting worker with pid: 28869
+[2020-03-13 17:23:06 +0530] [28870] [INFO] Booting worker with pid: 28870
+[2020-03-13 17:23:06 +0530] [28871] [INFO] Booting worker with pid: 28871
+[2020-03-13 17:23:06 +0530] [28872] [INFO] Booting worker with pid: 28872
+[2020-03-13 17:23:06 +0530] [28873] [INFO] Booting worker with pid: 28873
+[2020-03-13 17:23:06 +0530] [28874] [INFO] Booting worker with pid: 28874
+[2020-03-13 17:23:06 +0530] [28875] [INFO] Booting worker with pid: 28875
+[2020-03-13 17:23:06 +0530] [28876] [INFO] Booting worker with pid: 28876
+[2020-03-13 17:23:06 +0530] [28877] [INFO] Booting worker with pid: 28877
+[2020-03-13 17:23:06 +0530] [28878] [INFO] Booting worker with pid: 28878
+[2020-03-13 17:23:06 +0530] [28879] [INFO] Booting worker with pid: 28879
+[2020-03-13 17:23:06 +0530] [28880] [INFO] Booting worker with pid: 28880
+[2020-03-13 17:23:06 +0530] [28881] [INFO] Booting worker with pid: 28881
+[2020-03-13 17:23:06 +0530] [28882] [INFO] Booting worker with pid: 28882
+[2020-03-13 17:23:07 +0530] [28883] [INFO] Booting worker with pid: 28883
+[2020-03-13 17:23:07 +0530] [28884] [INFO] Booting worker with pid: 28884
+[2020-03-13 17:23:07 +0530] [28885] [INFO] Booting worker with pid: 28885
+[2020-03-13 17:23:07 +0530] [28886] [INFO] Booting worker with pid: 28886
+[2020-03-13 17:23:07 +0530] [28887] [INFO] Booting worker with pid: 28887
+[2020-03-13 17:23:07 +0530] [28888] [INFO] Booting worker with pid: 28888
+[2020-03-13 17:23:07 +0530] [28889] [INFO] Booting worker with pid: 28889
+[2020-03-13 17:23:07 +0530] [28890] [INFO] Booting worker with pid: 28890
+[2020-03-13 17:23:07 +0530] [28891] [INFO] Booting worker with pid: 28891
+[2020-03-13 17:23:07 +0530] [28892] [INFO] Booting worker with pid: 28892
+[2020-03-13 17:23:07 +0530] [28893] [INFO] Booting worker with pid: 28893
+[2020-03-13 17:23:07 +0530] [28894] [INFO] Booting worker with pid: 28894
+[2020-03-13 17:23:07 +0530] [28895] [INFO] Booting worker with pid: 28895
+[2020-03-13 17:23:07 +0530] [28896] [INFO] Booting worker with pid: 28896
+[2020-03-13 17:23:07 +0530] [28897] [INFO] Booting worker with pid: 28897
+[2020-03-13 17:23:07 +0530] [28898] [INFO] Booting worker with pid: 28898
+[2020-03-13 17:23:07 +0530] [28899] [INFO] Booting worker with pid: 28899
+[2020-03-13 17:23:07 +0530] [28900] [INFO] Booting worker with pid: 28900
+[2020-03-13 17:23:08 +0530] [28901] [INFO] Booting worker with pid: 28901
+[2020-03-13 17:23:08 +0530] [28902] [INFO] Booting worker with pid: 28902
+[2020-03-13 17:23:08 +0530] [28903] [INFO] Booting worker with pid: 28903
+[2020-03-13 17:23:08 +0530] [28904] [INFO] Booting worker with pid: 28904
+[2020-03-13 17:23:08 +0530] [28905] [INFO] Booting worker with pid: 28905
+[2020-03-13 17:23:08 +0530] [28906] [INFO] Booting worker with pid: 28906
+[2020-03-13 17:23:08 +0530] [28907] [INFO] Booting worker with pid: 28907
+[2020-03-13 17:23:08 +0530] [28908] [INFO] Booting worker with pid: 28908
+[2020-03-13 17:23:08 +0530] [28910] [INFO] Booting worker with pid: 28910
+[2020-03-13 17:23:08 +0530] [28911] [INFO] Booting worker with pid: 28911
+[2020-03-13 17:23:08 +0530] [28912] [INFO] Booting worker with pid: 28912
+[2020-03-13 17:23:08 +0530] [28913] [INFO] Booting worker with pid: 28913
+[2020-03-13 17:23:08 +0530] [28914] [INFO] Booting worker with pid: 28914
+[2020-03-13 17:23:08 +0530] [28915] [INFO] Booting worker with pid: 28915
+[2020-03-13 17:23:08 +0530] [28916] [INFO] Booting worker with pid: 28916
+[2020-03-13 17:23:08 +0530] [28917] [INFO] Booting worker with pid: 28917
+[2020-03-13 17:23:08 +0530] [28918] [INFO] Booting worker with pid: 28918
+[2020-03-13 17:23:08 +0530] [28919] [INFO] Booting worker with pid: 28919
+[2020-03-13 17:23:08 +0530] [28920] [INFO] Booting worker with pid: 28920
+[2020-03-13 17:23:08 +0530] [28921] [INFO] Booting worker with pid: 28921
+[2020-03-13 17:23:09 +0530] [28922] [INFO] Booting worker with pid: 28922
+[2020-03-13 17:23:09 +0530] [28923] [INFO] Booting worker with pid: 28923
+[2020-03-13 17:23:09 +0530] [28924] [INFO] Booting worker with pid: 28924
+[2020-03-13 17:23:09 +0530] [28925] [INFO] Booting worker with pid: 28925
+[2020-03-13 17:23:09 +0530] [28926] [INFO] Booting worker with pid: 28926
+[2020-03-13 17:23:09 +0530] [28927] [INFO] Booting worker with pid: 28927
+[2020-03-13 17:23:09 +0530] [28928] [INFO] Booting worker with pid: 28928
+[2020-03-13 17:23:09 +0530] [28929] [INFO] Booting worker with pid: 28929
+[2020-03-13 17:23:09 +0530] [28930] [INFO] Booting worker with pid: 28930
+[2020-03-13 17:23:09 +0530] [28931] [INFO] Booting worker with pid: 28931
+[2020-03-13 17:23:09 +0530] [28932] [INFO] Booting worker with pid: 28932
+[2020-03-13 17:23:09 +0530] [28933] [INFO] Booting worker with pid: 28933
+[2020-03-13 17:23:09 +0530] [28934] [INFO] Booting worker with pid: 28934
+[2020-03-13 17:23:09 +0530] [28935] [INFO] Booting worker with pid: 28935
+[2020-03-13 17:23:09 +0530] [28936] [INFO] Booting worker with pid: 28936
+[2020-03-13 17:23:09 +0530] [28937] [INFO] Booting worker with pid: 28937
+[2020-03-13 17:23:09 +0530] [28938] [INFO] Booting worker with pid: 28938
+[2020-03-13 17:23:09 +0530] [28939] [INFO] Booting worker with pid: 28939
+[2020-03-13 17:23:09 +0530] [28940] [INFO] Booting worker with pid: 28940
+[2020-03-13 17:23:09 +0530] [28941] [INFO] Booting worker with pid: 28941
+[2020-03-13 17:23:10 +0530] [28947] [INFO] Booting worker with pid: 28947
+[2020-03-13 17:23:10 +0530] [28948] [INFO] Booting worker with pid: 28948
+[2020-03-13 17:23:10 +0530] [28949] [INFO] Booting worker with pid: 28949
+[2020-03-13 17:23:10 +0530] [28950] [INFO] Booting worker with pid: 28950
+[2020-03-13 17:23:10 +0530] [28951] [INFO] Booting worker with pid: 28951
+[2020-03-13 17:23:10 +0530] [28952] [INFO] Booting worker with pid: 28952
+[2020-03-13 17:23:10 +0530] [28953] [INFO] Booting worker with pid: 28953
+[2020-03-13 17:23:10 +0530] [28954] [INFO] Booting worker with pid: 28954
+[2020-03-13 17:23:10 +0530] [28955] [INFO] Booting worker with pid: 28955
+[2020-03-13 17:23:10 +0530] [28956] [INFO] Booting worker with pid: 28956
+[2020-03-13 17:23:10 +0530] [28957] [INFO] Booting worker with pid: 28957
+[2020-03-13 17:23:10 +0530] [28958] [INFO] Booting worker with pid: 28958
+[2020-03-13 17:23:10 +0530] [28959] [INFO] Booting worker with pid: 28959
+[2020-03-13 17:23:10 +0530] [28850] [DEBUG] 97 workers
+[2020-03-13 11:53:17 +0000] [28956] [DEBUG] GET /codingclubiitgaboutus/
+Not Found: /codingclubiitgaboutus/
+[2020-03-13 11:53:21 +0000] [28872] [DEBUG] GET /codingclubiitg
+[2020-03-13 11:53:21 +0000] [28914] [DEBUG] GET /codingclubiitg/
+[2020-03-13 17:23:46 +0530] [28850] [INFO] Handling signal: term
+[2020-03-13 11:53:46 +0000] [28864] [INFO] Worker exiting (pid: 28864)
+[2020-03-13 11:53:46 +0000] [28861] [INFO] Worker exiting (pid: 28861)
+[2020-03-13 11:53:46 +0000] [28869] [INFO] Worker exiting (pid: 28869)
+[2020-03-13 11:53:46 +0000] [28876] [INFO] Worker exiting (pid: 28876)
+[2020-03-13 11:53:46 +0000] [28875] [INFO] Worker exiting (pid: 28875)
+[2020-03-13 11:53:46 +0000] [28857] [INFO] Worker exiting (pid: 28857)
+[2020-03-13 11:53:46 +0000] [28862] [INFO] Worker exiting (pid: 28862)
+[2020-03-13 11:53:46 +0000] [28860] [INFO] Worker exiting (pid: 28860)
+[2020-03-13 11:53:46 +0000] [28881] [INFO] Worker exiting (pid: 28881)
+[2020-03-13 11:53:46 +0000] [28874] [INFO] Worker exiting (pid: 28874)
+[2020-03-13 11:53:46 +0000] [28863] [INFO] Worker exiting (pid: 28863)
+[2020-03-13 11:53:46 +0000] [28878] [INFO] Worker exiting (pid: 28878)
+[2020-03-13 11:53:46 +0000] [28858] [INFO] Worker exiting (pid: 28858)
+[2020-03-13 11:53:46 +0000] [28871] [INFO] Worker exiting (pid: 28871)
+[2020-03-13 11:53:46 +0000] [28873] [INFO] Worker exiting (pid: 28873)
+[2020-03-13 11:53:46 +0000] [28865] [INFO] Worker exiting (pid: 28865)
+[2020-03-13 11:53:46 +0000] [28859] [INFO] Worker exiting (pid: 28859)
+[2020-03-13 11:53:46 +0000] [28868] [INFO] Worker exiting (pid: 28868)
+[2020-03-13 11:53:46 +0000] [28866] [INFO] Worker exiting (pid: 28866)
+[2020-03-13 11:53:46 +0000] [28872] [INFO] Worker exiting (pid: 28872)
+[2020-03-13 11:53:46 +0000] [28870] [INFO] Worker exiting (pid: 28870)
+[2020-03-13 11:53:46 +0000] [28880] [INFO] Worker exiting (pid: 28880)
+[2020-03-13 11:53:46 +0000] [28882] [INFO] Worker exiting (pid: 28882)
+[2020-03-13 11:53:46 +0000] [28867] [INFO] Worker exiting (pid: 28867)
+[2020-03-13 11:53:46 +0000] [28883] [INFO] Worker exiting (pid: 28883)
+[2020-03-13 11:53:46 +0000] [28877] [INFO] Worker exiting (pid: 28877)
+[2020-03-13 11:53:46 +0000] [28879] [INFO] Worker exiting (pid: 28879)
+[2020-03-13 11:53:46 +0000] [28884] [INFO] Worker exiting (pid: 28884)
+[2020-03-13 11:53:46 +0000] [28887] [INFO] Worker exiting (pid: 28887)
+[2020-03-13 11:53:46 +0000] [28886] [INFO] Worker exiting (pid: 28886)
+[2020-03-13 11:53:46 +0000] [28885] [INFO] Worker exiting (pid: 28885)
+[2020-03-13 11:53:46 +0000] [28889] [INFO] Worker exiting (pid: 28889)
+[2020-03-13 11:53:46 +0000] [28893] [INFO] Worker exiting (pid: 28893)
+[2020-03-13 11:53:46 +0000] [28899] [INFO] Worker exiting (pid: 28899)
+[2020-03-13 11:53:46 +0000] [28900] [INFO] Worker exiting (pid: 28900)
+[2020-03-13 11:53:46 +0000] [28903] [INFO] Worker exiting (pid: 28903)
+[2020-03-13 11:53:46 +0000] [28892] [INFO] Worker exiting (pid: 28892)
+[2020-03-13 11:53:46 +0000] [28914] [INFO] Worker exiting (pid: 28914)
+[2020-03-13 11:53:46 +0000] [28920] [INFO] Worker exiting (pid: 28920)
+[2020-03-13 11:53:46 +0000] [28895] [INFO] Worker exiting (pid: 28895)
+[2020-03-13 11:53:46 +0000] [28929] [INFO] Worker exiting (pid: 28929)
+[2020-03-13 11:53:46 +0000] [28911] [INFO] Worker exiting (pid: 28911)
+[2020-03-13 11:53:46 +0000] [28930] [INFO] Worker exiting (pid: 28930)
+[2020-03-13 11:53:46 +0000] [28925] [INFO] Worker exiting (pid: 28925)
+[2020-03-13 11:53:46 +0000] [28938] [INFO] Worker exiting (pid: 28938)
+[2020-03-13 11:53:46 +0000] [28927] [INFO] Worker exiting (pid: 28927)
+[2020-03-13 11:53:46 +0000] [28890] [INFO] Worker exiting (pid: 28890)
+[2020-03-13 11:53:46 +0000] [28939] [INFO] Worker exiting (pid: 28939)
+[2020-03-13 11:53:46 +0000] [28923] [INFO] Worker exiting (pid: 28923)
+[2020-03-13 11:53:46 +0000] [28905] [INFO] Worker exiting (pid: 28905)
+[2020-03-13 11:53:46 +0000] [28912] [INFO] Worker exiting (pid: 28912)
+[2020-03-13 11:53:46 +0000] [28902] [INFO] Worker exiting (pid: 28902)
+[2020-03-13 11:53:46 +0000] [28959] [INFO] Worker exiting (pid: 28959)
+[2020-03-13 11:53:46 +0000] [28904] [INFO] Worker exiting (pid: 28904)
+[2020-03-13 11:53:46 +0000] [28926] [INFO] Worker exiting (pid: 28926)
+[2020-03-13 11:53:46 +0000] [28957] [INFO] Worker exiting (pid: 28957)
+[2020-03-13 11:53:46 +0000] [28931] [INFO] Worker exiting (pid: 28931)
+[2020-03-13 11:53:46 +0000] [28901] [INFO] Worker exiting (pid: 28901)
+[2020-03-13 11:53:46 +0000] [28908] [INFO] Worker exiting (pid: 28908)
+[2020-03-13 11:53:46 +0000] [28891] [INFO] Worker exiting (pid: 28891)
+[2020-03-13 11:53:46 +0000] [28907] [INFO] Worker exiting (pid: 28907)
+[2020-03-13 11:53:46 +0000] [28954] [INFO] Worker exiting (pid: 28954)
+[2020-03-13 11:53:46 +0000] [28932] [INFO] Worker exiting (pid: 28932)
+[2020-03-13 11:53:46 +0000] [28948] [INFO] Worker exiting (pid: 28948)
+[2020-03-13 11:53:46 +0000] [28898] [INFO] Worker exiting (pid: 28898)
+[2020-03-13 11:53:46 +0000] [28894] [INFO] Worker exiting (pid: 28894)
+[2020-03-13 11:53:46 +0000] [28934] [INFO] Worker exiting (pid: 28934)
+[2020-03-13 11:53:46 +0000] [28906] [INFO] Worker exiting (pid: 28906)
+[2020-03-13 11:53:46 +0000] [28913] [INFO] Worker exiting (pid: 28913)
+[2020-03-13 11:53:46 +0000] [28910] [INFO] Worker exiting (pid: 28910)
+[2020-03-13 11:53:46 +0000] [28941] [INFO] Worker exiting (pid: 28941)
+[2020-03-13 11:53:46 +0000] [28897] [INFO] Worker exiting (pid: 28897)
+[2020-03-13 11:53:46 +0000] [28935] [INFO] Worker exiting (pid: 28935)
+[2020-03-13 11:53:46 +0000] [28919] [INFO] Worker exiting (pid: 28919)
+[2020-03-13 11:53:46 +0000] [28917] [INFO] Worker exiting (pid: 28917)
+[2020-03-13 11:53:46 +0000] [28940] [INFO] Worker exiting (pid: 28940)
+[2020-03-13 11:53:46 +0000] [28937] [INFO] Worker exiting (pid: 28937)
+[2020-03-13 11:53:46 +0000] [28896] [INFO] Worker exiting (pid: 28896)
+[2020-03-13 11:53:46 +0000] [28953] [INFO] Worker exiting (pid: 28953)
+[2020-03-13 11:53:46 +0000] [28918] [INFO] Worker exiting (pid: 28918)
+[2020-03-13 11:53:46 +0000] [28955] [INFO] Worker exiting (pid: 28955)
+[2020-03-13 11:53:46 +0000] [28952] [INFO] Worker exiting (pid: 28952)
+[2020-03-13 11:53:46 +0000] [28924] [INFO] Worker exiting (pid: 28924)
+[2020-03-13 11:53:46 +0000] [28947] [INFO] Worker exiting (pid: 28947)
+[2020-03-13 11:53:46 +0000] [28936] [INFO] Worker exiting (pid: 28936)
+[2020-03-13 11:53:46 +0000] [28956] [INFO] Worker exiting (pid: 28956)
+[2020-03-13 11:53:46 +0000] [28949] [INFO] Worker exiting (pid: 28949)
+[2020-03-13 11:53:46 +0000] [28922] [INFO] Worker exiting (pid: 28922)
+[2020-03-13 11:53:46 +0000] [28951] [INFO] Worker exiting (pid: 28951)
+[2020-03-13 11:53:46 +0000] [28933] [INFO] Worker exiting (pid: 28933)
+[2020-03-13 11:53:46 +0000] [28950] [INFO] Worker exiting (pid: 28950)
+[2020-03-13 11:53:46 +0000] [28888] [INFO] Worker exiting (pid: 28888)
+[2020-03-13 11:53:46 +0000] [28915] [INFO] Worker exiting (pid: 28915)
+[2020-03-13 11:53:46 +0000] [28928] [INFO] Worker exiting (pid: 28928)
+[2020-03-13 11:53:46 +0000] [28921] [INFO] Worker exiting (pid: 28921)
+[2020-03-13 11:53:46 +0000] [28958] [INFO] Worker exiting (pid: 28958)
+[2020-03-13 11:53:46 +0000] [28916] [INFO] Worker exiting (pid: 28916)
+[2020-03-13 17:23:47 +0530] [28850] [INFO] Shutting down: Master
+Starting codingclubiitg as coding-club
+[2020-03-13 17:23:47 +0530] [29262] [DEBUG] Current configuration:
+  config: None
+  bind: ['unix:/webapps/codingclubiitg/run/gunicorn.sock']
+  backlog: 2048
+  workers: 97
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /webapps/codingclubiitg
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1001
+  group: 999
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: -
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: codingclubiitg
+  default_proc_name: mysite.wsgi:application
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f17ebe0f840>
+  on_reload: <function OnReload.on_reload at 0x7f17ebe0f950>
+  when_ready: <function WhenReady.when_ready at 0x7f17ebe0fa60>
+  pre_fork: <function Prefork.pre_fork at 0x7f17ebe0fb70>
+  post_fork: <function Postfork.post_fork at 0x7f17ebe0fc80>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f17ebe0fd90>
+  worker_int: <function WorkerInt.worker_int at 0x7f17ebe0fea0>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f17ebe26048>
+  pre_exec: <function PreExec.pre_exec at 0x7f17ebe26158>
+  pre_request: <function PreRequest.pre_request at 0x7f17ebe26268>
+  post_request: <function PostRequest.post_request at 0x7f17ebe262f0>
+  child_exit: <function ChildExit.child_exit at 0x7f17ebe26400>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f17ebe26510>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f17ebe26620>
+  on_exit: <function OnExit.on_exit at 0x7f17ebe26730>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2020-03-13 17:23:47 +0530] [29262] [INFO] Starting gunicorn 20.0.4
+[2020-03-13 17:23:47 +0530] [29262] [DEBUG] Arbiter booted
+[2020-03-13 17:23:47 +0530] [29262] [INFO] Listening at: unix:/webapps/codingclubiitg/run/gunicorn.sock (29262)
+[2020-03-13 17:23:47 +0530] [29262] [INFO] Using worker: sync
+[2020-03-13 17:23:48 +0530] [29270] [INFO] Booting worker with pid: 29270
+[2020-03-13 17:23:48 +0530] [29272] [INFO] Booting worker with pid: 29272
+[2020-03-13 17:23:48 +0530] [29274] [INFO] Booting worker with pid: 29274
+[2020-03-13 17:23:48 +0530] [29276] [INFO] Booting worker with pid: 29276
+[2020-03-13 17:23:48 +0530] [29278] [INFO] Booting worker with pid: 29278
+[2020-03-13 17:23:48 +0530] [29279] [INFO] Booting worker with pid: 29279
+[2020-03-13 17:23:48 +0530] [29281] [INFO] Booting worker with pid: 29281
+[2020-03-13 17:23:48 +0530] [29282] [INFO] Booting worker with pid: 29282
+[2020-03-13 17:23:48 +0530] [29283] [INFO] Booting worker with pid: 29283
+[2020-03-13 17:23:48 +0530] [29284] [INFO] Booting worker with pid: 29284
+[2020-03-13 17:23:48 +0530] [29286] [INFO] Booting worker with pid: 29286
+[2020-03-13 17:23:48 +0530] [29287] [INFO] Booting worker with pid: 29287
+[2020-03-13 17:23:48 +0530] [29289] [INFO] Booting worker with pid: 29289
+[2020-03-13 17:23:48 +0530] [29290] [INFO] Booting worker with pid: 29290
+[2020-03-13 17:23:48 +0530] [29291] [INFO] Booting worker with pid: 29291
+[2020-03-13 17:23:48 +0530] [29292] [INFO] Booting worker with pid: 29292
+[2020-03-13 17:23:48 +0530] [29294] [INFO] Booting worker with pid: 29294
+[2020-03-13 17:23:48 +0530] [29296] [INFO] Booting worker with pid: 29296
+[2020-03-13 17:23:48 +0530] [29297] [INFO] Booting worker with pid: 29297
+[2020-03-13 17:23:48 +0530] [29299] [INFO] Booting worker with pid: 29299
+[2020-03-13 17:23:49 +0530] [29300] [INFO] Booting worker with pid: 29300
+[2020-03-13 17:23:49 +0530] [29302] [INFO] Booting worker with pid: 29302
+[2020-03-13 17:23:49 +0530] [29303] [INFO] Booting worker with pid: 29303
+[2020-03-13 17:23:49 +0530] [29304] [INFO] Booting worker with pid: 29304
+[2020-03-13 17:23:49 +0530] [29306] [INFO] Booting worker with pid: 29306
+[2020-03-13 17:23:49 +0530] [29308] [INFO] Booting worker with pid: 29308
+[2020-03-13 17:23:49 +0530] [29309] [INFO] Booting worker with pid: 29309
+[2020-03-13 17:23:49 +0530] [29311] [INFO] Booting worker with pid: 29311
+[2020-03-13 17:23:49 +0530] [29313] [INFO] Booting worker with pid: 29313
+[2020-03-13 17:23:49 +0530] [29315] [INFO] Booting worker with pid: 29315
+[2020-03-13 17:23:49 +0530] [29316] [INFO] Booting worker with pid: 29316
+[2020-03-13 17:23:49 +0530] [29318] [INFO] Booting worker with pid: 29318
+[2020-03-13 17:23:49 +0530] [29320] [INFO] Booting worker with pid: 29320
+[2020-03-13 17:23:49 +0530] [29322] [INFO] Booting worker with pid: 29322
+[2020-03-13 17:23:49 +0530] [29324] [INFO] Booting worker with pid: 29324
+[2020-03-13 17:23:50 +0530] [29325] [INFO] Booting worker with pid: 29325
+[2020-03-13 17:23:50 +0530] [29327] [INFO] Booting worker with pid: 29327
+[2020-03-13 17:23:50 +0530] [29329] [INFO] Booting worker with pid: 29329
+[2020-03-13 17:23:50 +0530] [29330] [INFO] Booting worker with pid: 29330
+[2020-03-13 17:23:50 +0530] [29331] [INFO] Booting worker with pid: 29331
+[2020-03-13 17:23:50 +0530] [29333] [INFO] Booting worker with pid: 29333
+[2020-03-13 17:23:50 +0530] [29334] [INFO] Booting worker with pid: 29334
+[2020-03-13 17:23:50 +0530] [29335] [INFO] Booting worker with pid: 29335
+[2020-03-13 17:23:50 +0530] [29337] [INFO] Booting worker with pid: 29337
+[2020-03-13 17:23:50 +0530] [29338] [INFO] Booting worker with pid: 29338
+[2020-03-13 17:23:50 +0530] [29339] [INFO] Booting worker with pid: 29339
+[2020-03-13 17:23:50 +0530] [29348] [INFO] Booting worker with pid: 29348
+[2020-03-13 17:23:50 +0530] [29356] [INFO] Booting worker with pid: 29356
+[2020-03-13 17:23:50 +0530] [29402] [INFO] Booting worker with pid: 29402
+[2020-03-13 17:23:50 +0530] [29403] [INFO] Booting worker with pid: 29403
+[2020-03-13 17:23:50 +0530] [29405] [INFO] Booting worker with pid: 29405
+[2020-03-13 17:23:50 +0530] [29407] [INFO] Booting worker with pid: 29407
+[2020-03-13 17:23:50 +0530] [29408] [INFO] Booting worker with pid: 29408
+[2020-03-13 17:23:50 +0530] [29409] [INFO] Booting worker with pid: 29409
+[2020-03-13 17:23:50 +0530] [29410] [INFO] Booting worker with pid: 29410
+[2020-03-13 17:23:50 +0530] [29412] [INFO] Booting worker with pid: 29412
+[2020-03-13 17:23:50 +0530] [29413] [INFO] Booting worker with pid: 29413
+[2020-03-13 17:23:50 +0530] [29415] [INFO] Booting worker with pid: 29415
+[2020-03-13 17:23:50 +0530] [29416] [INFO] Booting worker with pid: 29416
+[2020-03-13 17:23:50 +0530] [29418] [INFO] Booting worker with pid: 29418
+[2020-03-13 17:23:50 +0530] [29419] [INFO] Booting worker with pid: 29419
+[2020-03-13 17:23:50 +0530] [29420] [INFO] Booting worker with pid: 29420
+[2020-03-13 17:23:51 +0530] [29421] [INFO] Booting worker with pid: 29421
+[2020-03-13 17:23:51 +0530] [29422] [INFO] Booting worker with pid: 29422
+[2020-03-13 17:23:51 +0530] [29423] [INFO] Booting worker with pid: 29423
+[2020-03-13 17:23:51 +0530] [29425] [INFO] Booting worker with pid: 29425
+[2020-03-13 17:23:51 +0530] [29427] [INFO] Booting worker with pid: 29427
+[2020-03-13 17:23:51 +0530] [29429] [INFO] Booting worker with pid: 29429
+[2020-03-13 17:23:51 +0530] [29430] [INFO] Booting worker with pid: 29430
+[2020-03-13 17:23:51 +0530] [29432] [INFO] Booting worker with pid: 29432
+[2020-03-13 17:23:51 +0530] [29434] [INFO] Booting worker with pid: 29434
+[2020-03-13 17:23:51 +0530] [29445] [INFO] Booting worker with pid: 29445
+[2020-03-13 17:23:51 +0530] [29446] [INFO] Booting worker with pid: 29446
+[2020-03-13 17:23:51 +0530] [29447] [INFO] Booting worker with pid: 29447
+[2020-03-13 17:23:51 +0530] [29449] [INFO] Booting worker with pid: 29449
+[2020-03-13 17:23:51 +0530] [29451] [INFO] Booting worker with pid: 29451
+[2020-03-13 17:23:51 +0530] [29452] [INFO] Booting worker with pid: 29452
+[2020-03-13 17:23:51 +0530] [29453] [INFO] Booting worker with pid: 29453
+[2020-03-13 17:23:51 +0530] [29455] [INFO] Booting worker with pid: 29455
+[2020-03-13 17:23:51 +0530] [29456] [INFO] Booting worker with pid: 29456
+[2020-03-13 17:23:51 +0530] [29457] [INFO] Booting worker with pid: 29457
+[2020-03-13 17:23:52 +0530] [29459] [INFO] Booting worker with pid: 29459
+[2020-03-13 17:23:52 +0530] [29460] [INFO] Booting worker with pid: 29460
+[2020-03-13 17:23:52 +0530] [29462] [INFO] Booting worker with pid: 29462
+[2020-03-13 17:23:52 +0530] [29463] [INFO] Booting worker with pid: 29463
+[2020-03-13 17:23:52 +0530] [29475] [INFO] Booting worker with pid: 29475
+[2020-03-13 17:23:52 +0530] [29476] [INFO] Booting worker with pid: 29476
+[2020-03-13 17:23:52 +0530] [29478] [INFO] Booting worker with pid: 29478
+[2020-03-13 17:23:52 +0530] [29480] [INFO] Booting worker with pid: 29480
+[2020-03-13 17:23:52 +0530] [29481] [INFO] Booting worker with pid: 29481
+[2020-03-13 17:23:52 +0530] [29483] [INFO] Booting worker with pid: 29483
+[2020-03-13 17:23:52 +0530] [29485] [INFO] Booting worker with pid: 29485
+[2020-03-13 17:23:52 +0530] [29487] [INFO] Booting worker with pid: 29487
+[2020-03-13 17:23:52 +0530] [29488] [INFO] Booting worker with pid: 29488
+[2020-03-13 17:23:52 +0530] [29489] [INFO] Booting worker with pid: 29489
+[2020-03-13 17:23:52 +0530] [29491] [INFO] Booting worker with pid: 29491
+[2020-03-13 17:23:52 +0530] [29492] [INFO] Booting worker with pid: 29492
+[2020-03-13 17:23:52 +0530] [29262] [DEBUG] 97 workers
+[2020-03-13 11:53:53 +0000] [29460] [DEBUG] GET /codingclubiitg/
+[2020-03-13 11:53:55 +0000] [29489] [DEBUG] GET /codingclubiitg/events/
+[2020-03-13 11:53:56 +0000] [29481] [DEBUG] GET /codingclubiitg/events/images/ico/favicon.ico
+[2020-03-13 11:53:57 +0000] [29415] [DEBUG] GET /codingclubiitg/projects/
+[2020-03-13 11:53:57 +0000] [29356] [DEBUG] GET /codingclubiitg/projects/images/ico/favicon.ico
+[2020-03-13 11:53:58 +0000] [29356] [DEBUG] GET /codingclubiitg/register/
+[2020-03-13 11:53:59 +0000] [29309] [DEBUG] GET /codingclubiitg/register/images/ico/favicon.ico
+[2020-03-13 11:54:00 +0000] [29487] [DEBUG] GET /codingclubiitg/events/
+[2020-03-13 11:54:01 +0000] [29425] [DEBUG] GET /codingclubiitg/aboutus/
+[2020-03-13 11:54:02 +0000] [29489] [DEBUG] GET /codingclubiitg/aboutus/images/ico/favicon.ico
+[2020-03-13 11:54:03 +0000] [29453] [DEBUG] GET /codingclubiitg/aboutus/
+[2020-03-13 11:54:04 +0000] [29299] [DEBUG] GET /codingclubiitg/
+[2020-03-13 11:54:08 +0000] [29331] [DEBUG] GET /codingclubiitg/abcd
+[2020-03-13 11:57:27 +0000] [29330] [DEBUG] GET /codingclubiitg/aboutus/
+[2020-03-13 11:57:41 +0000] [29427] [DEBUG] GET /codingclubiitg/aboutus/
+[2020-03-13 11:59:00 +0000] [29315] [DEBUG] GET /codingclubiitg/aboutus/
+[2020-03-13 11:59:04 +0000] [29422] [DEBUG] GET /codingclubiitg/
+[2020-03-13 11:59:14 +0000] [29446] [DEBUG] GET /codingclubiitg/aboutus/
+[2020-03-13 11:59:19 +0000] [29333] [DEBUG] GET /codingclubiitg/
+[2020-03-13 12:00:30 +0000] [29451] [DEBUG] GET /codingclubiitg/
+[2020-03-13 12:00:44 +0000] [29283] [DEBUG] GET /codingclubiitg/aboutus/
+[2020-03-13 12:04:21 +0000] [29309] [DEBUG] GET /codingclubiitg/
+[2020-03-13 12:06:02 +0000] [29434] [DEBUG] GET /codingclubiitg
+[2020-03-13 12:06:02 +0000] [29434] [DEBUG] GET /codingclubiitg/
+[2020-03-13 12:07:23 +0000] [29460] [DEBUG] GET /codingclubiitg/
+[2020-03-13 12:10:41 +0000] [29455] [DEBUG] GET /codingclubiitg/projects/
+[2020-03-13 12:10:43 +0000] [29339] [DEBUG] GET /codingclubiitg/projects/images/ico/favicon.ico
+[2020-03-13 12:16:17 +0000] [29491] [DEBUG] GET /codingclubiitg/events/
+[2020-03-13 12:16:20 +0000] [29286] [DEBUG] GET /codingclubiitg/events/images/ico/favicon.ico
+[2020-03-13 12:16:24 +0000] [29299] [DEBUG] GET /codingclubiitg/register/
+[2020-03-13 12:16:25 +0000] [29304] [DEBUG] GET /codingclubiitg/register/images/ico/favicon.ico
+[2020-03-13 12:16:26 +0000] [29311] [DEBUG] GET /codingclubiitg/projects/
+[2020-03-13 12:16:27 +0000] [29478] [DEBUG] GET /codingclubiitg/events/
+[2020-03-13 12:16:29 +0000] [29337] [DEBUG] GET /codingclubiitg/aboutus/
+[2020-03-13 12:16:30 +0000] [29480] [DEBUG] GET /codingclubiitg/
+[2020-03-13 12:16:31 +0000] [29348] [DEBUG] GET /codingclubiitg/aboutus/
+[2020-03-13 12:16:39 +0000] [29476] [DEBUG] GET /codingclubiitg/
+[2020-03-13 12:17:28 +0000] [29327] [DEBUG] GET /codingclubiitg/
+[2020-03-13 12:24:21 +0000] [29421] [DEBUG] GET /codingclubiitg/
+[2020-03-13 12:24:29 +0000] [29409] [DEBUG] GET /codingclubiitg/aboutus/
+[2020-03-13 12:24:30 +0000] [29299] [DEBUG] GET /codingclubiitg/aboutus/images/ico/favicon.ico
+[2020-03-13 12:24:31 +0000] [29309] [DEBUG] GET /codingclubiitg/projects/
+[2020-03-13 12:24:31 +0000] [29296] [DEBUG] GET /codingclubiitg/projects/images/ico/favicon.ico
+[2020-03-13 12:24:32 +0000] [29302] [DEBUG] GET /codingclubiitg/events/
+[2020-03-13 12:24:33 +0000] [29329] [DEBUG] GET /codingclubiitg/events/images/ico/favicon.ico
+[2020-03-13 12:24:34 +0000] [29329] [DEBUG] GET /codingclubiitg/
+[2020-03-13 12:34:51 +0000] [29476] [DEBUG] GET /codingclubiitg/events/
+[2020-03-13 12:34:59 +0000] [29337] [DEBUG] GET /codingclubiitg/projects/
+[2020-03-13 12:35:13 +0000] [29425] [DEBUG] GET /admin
+[2020-03-13 12:35:21 +0000] [29455] [DEBUG] GET /codingclubiitg/admin
+[2020-03-13 12:35:21 +0000] [29309] [DEBUG] GET /codingclubiitg/admin/
+[2020-03-13 12:35:21 +0000] [29330] [DEBUG] GET /codingclubiitg/admin/login/
+[2020-03-13 12:35:31 +0000] [29304] [DEBUG] POST /codingclubiitg/admin/login/
+[2020-03-13 12:36:37 +0000] [29309] [DEBUG] GET /codingclubiitg/admin/login/
+[2020-03-13 12:36:43 +0000] [29339] [DEBUG] GET /codingclubiitg/
+[2020-03-13 12:36:51 +0000] [29296] [DEBUG] GET /codingclubiitg/login/
+[2020-03-13 12:37:02 +0000] [29282] [DEBUG] GET /codingclubiitg/admin
+[2020-03-13 12:37:02 +0000] [29282] [DEBUG] GET /codingclubiitg/admin/
+[2020-03-13 12:37:02 +0000] [29412] [DEBUG] GET /codingclubiitg/admin/login/
+[2020-03-13 12:37:02 +0000] [29416] [DEBUG] GET /favicon.ico
+[2020-03-13 12:38:08 +0000] [29402] [DEBUG] POST /codingclubiitg/admin/login/
+[2020-03-13 12:38:08 +0000] [29402] [DEBUG] GET /codingclubiitg/admin/
+[2020-03-13 12:38:28 +0000] [29407] [DEBUG] GET /codingclubiitg/
+[2020-03-13 12:39:34 +0000] [29289] [DEBUG] GET /codingclubiitg/aboutus/
+[2020-03-13 12:39:36 +0000] [29299] [DEBUG] GET /codingclubiitg/aboutus/images/ico/favicon.ico
+[2020-03-13 12:41:59 +0000] [29403] [DEBUG] GET /codingclubiitg/admin/CodingClubIITG/members/add/
+[2020-03-13 12:41:59 +0000] [29318] [DEBUG] GET /codingclubiitg/admin/jsi18n/
+[2020-03-13 12:42:20 +0000] [29300] [DEBUG] GET /codingclubiitg/admin/
