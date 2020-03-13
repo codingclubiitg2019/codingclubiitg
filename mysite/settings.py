@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'CodingClubIITG.apps.PollsConfig',
-    'crispy_forms'
+    'crispy_forms',
+    'import_export',
 ]
 
 MIDDLEWARE = [
