@@ -4,3 +4,4 @@ sqlparse==0.3.0
 Pillow
 django-crispy-forms==1.7.2
 django-import-export
+psycopg2
