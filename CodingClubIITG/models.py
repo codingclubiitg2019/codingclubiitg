@@ -30,6 +30,9 @@ class Event(models.Model):
     date = models.DateField(default=date.today)
     img = models.FileField(upload_to='events/')
 
+    def __str__(self):
+            return self.name
+
 
 class Members(models.Model):
 	name= models.CharField(max_length=300)
