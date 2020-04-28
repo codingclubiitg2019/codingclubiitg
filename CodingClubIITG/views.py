@@ -14,11 +14,14 @@ from mysite.settings import EMAIL_HOST_USER
 
 from django.shortcuts import get_object_or_404
 def index(request):
-    user = request.user
-    favorite_events = Favorite_events.objects.filter(for_user=user)
-    favorite_projects = Favorite_projects.objects.filter(for_user=user)
-
-    return render(request, 'CodingClubIITG/index.html',{'favorite_events':favorite_events,'favorite_projects':favorite_projects})
+    if not request.user.is_authenticated:
+        user=''
+        return render(request, 'CodingClubIITG/index.html',{'user':user})
+    else:
+        user = request.user
+        favorite_events = Favorite_events.objects.filter(for_user=user)
+        favorite_projects = Favorite_projects.objects.filter(for_user=user)
+        return render(request, 'CodingClubIITG/index.html',{'favorite_events':favorite_events,'favorite_projects':favorite_projects,'user':user})
 
 def aboutus(request):
     members=Members.objects.all()
@@ -28,18 +31,24 @@ def aboutus(request):
 
 def events(request):
     events=Event.objects.all().order_by("-date")
-    user = request.user
-    fav = Favorite_events.objects.filter(for_user=user)
     fav_events=[]
-    for f in fav:
-        fav_events.append(f.event)
+    if not request.user.is_authenticated:
+        user=''
+    else:
+        user = request.user
+        fav = Favorite_events.objects.filter(for_user=user)
+        for f in fav:
+            fav_events.append(f.event)
 
-    return render(request, 'CodingClubIITG/events.html', {'events':events,'fav_events':fav_events})
+    return render(request, 'CodingClubIITG/events.html', {'events':events,'fav_events':fav_events,'user':user})
 
 def event_detail(request, pk):
     event = Event.objects.get(pk=pk)
     comments = Discussion_events.objects.filter(event=event,replied_to__isnull=True)
-    user = request.user
+    if not request.user.is_authenticated:
+        user=''
+    else:
+        user = request.user
 
     return render(request, "CodingClubIITG/event_detail.html", {
         "event": event,
@@ -52,18 +61,24 @@ def blog(request):
 
 def projects(request):
     projects=Projects.objects.all().order_by("-date")
-    user = request.user
-    fav = Favorite_projects.objects.filter(for_user=user)
     fav_projects=[]
-    for f in fav:
-        fav_projects.append(f.project)
+    if not request.user.is_authenticated:
+        user=''
+    else:
+        user = request.user
+        fav = Favorite_projects.objects.filter(for_user=user)
+        for f in fav:
+            fav_projects.append(f.project)
 
-    return render(request, 'CodingClubIITG/projects.html',{'projects':projects,'fav_projects':fav_projects})
+    return render(request, 'CodingClubIITG/projects.html',{'projects':projects,'fav_projects':fav_projects,'user':user})
 
 def project_detail(request, pk):
     project = Projects.objects.get(pk=pk)
     comments = Discussion_projects.objects.filter(project=project,replied_to__isnull=True)
-    user = request.user
+    if not request.user.is_authenticated:
+        user=''
+    else:
+        user = request.user
 
     return render(request, "CodingClubIITG/project_detail.html", {
         "project": project,

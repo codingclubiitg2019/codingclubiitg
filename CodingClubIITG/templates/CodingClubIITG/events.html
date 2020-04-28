@@ -12,6 +12,7 @@
 					<h3>Venue: {{ event.venue }}</h3>
 					<p>Event Details: {{ event.details }}</p>
 					<h3>Speakers: {{ event.speakers }}</h3>
+					{% if user %}
 					<div class="text-right" id="effect{{event.pk}}">
 						{% if event in fav_events %}
 							<button type="button" class="btn btn-theme" data-toggle="tooltip" data-placement="bottom" title="Unfavorite" value="{{event.pk}}" onclick="unfavorite(this)"><i class="material-icons" style="color:red">favorite</i></button>
@@ -19,6 +20,7 @@
 							<button type="button" class="btn btn-theme" data-toggle="tooltip" data-placement="bottom" title="Add to favorites" value="{{event.pk}}" onclick="favorite(this)"><i class="material-icons">favorite_border</i> </button>
 						{% endif %}
 					</div>
+					{% endif %}
 				</div>
 				<div class="card-footer">Date: {{ event.date }}</div>
 			</div>
