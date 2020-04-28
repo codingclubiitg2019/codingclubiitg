@@ -18,6 +18,14 @@
     <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
     <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
     <link rel="stylesheet" type="text/css" href="{% static 'CodingClubIITG/css/style1.css' %}">
+
+    <!-- My versions -->
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- End -->
+
+
     <!--end of Meet the team new code in head section -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -68,7 +76,7 @@
                     <span class="icon-bar"></span>
                 </button>
 
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="{% url 'index' %}">
                    <h1><img src="{% static 'CodingClubIITG/images/18623168_453929331606843_1092010086_n.png' %}" alt="logo" height=60px;></h1>
                    <p> <img src="{% static 'CodingClubIITG/images/18600949_453929328273510_283481760_n.png' %}" alt="logo" height=28px;> </p>
                </a>
@@ -110,6 +118,7 @@
             <li><a href="{%url 'login'%}"><b>Log In</b></a></li>
             {% endif %}
             <li><button class="button button3" ><a id="iitghome" href="http://www.iitg.ac.in/" target="_blank">IITG HOME </a> </button></li>
+            <li class="dropdown"><a href="{% url 'feedback' %}"><b>Contact Us</b> </a></li>
         </ul>
     </div>
 </div>
