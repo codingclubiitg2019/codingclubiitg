@@ -1,7 +1,6 @@
 from django.db import models
 from datetime import date
 from django.contrib.auth.models import AbstractUser
-from django.contrib.auth.models import User
 # Create your models here.
 
 class User(AbstractUser):
@@ -34,6 +33,7 @@ class Event(models.Model):
     def __str__(self):
             return self.name
 
+
 class Members(models.Model):
 	name= models.CharField(max_length=300)
 	position=models.CharField(max_length=300)
@@ -45,36 +45,3 @@ class Members(models.Model):
 
 	def __str__(self):
 		return self.name
-
-
-
-
-
-# --------------------------------------------------------
-
-# Favorites
-
-class Favorite_events(models.Model):
-	for_user = models.ForeignKey(User,on_delete=models.CASCADE,default=1)
-	event = models.ForeignKey(Event,on_delete=models.CASCADE)
-
-class Favorite_projects(models.Model):
-	for_user = models.ForeignKey(User,on_delete=models.CASCADE,default=1)
-	project = models.ForeignKey(Projects,on_delete=models.CASCADE)
-
-# ------------------------------------------------------------
-
-# Discussion Forum
-
-class Discussion_events(models.Model):
-	user = models.ForeignKey(User,on_delete=models.CASCADE,default=1)
-	event = models.ForeignKey(Event,on_delete=models.CASCADE)
-	replied_to = models.ForeignKey("self",on_delete=models.CASCADE,null=True,blank=True)
-	text = models.TextField()
-
-class Discussion_projects(models.Model):
-	user = models.ForeignKey(User,on_delete=models.CASCADE,default=1)
-	project = models.ForeignKey(Projects,on_delete=models.CASCADE)
-	replied_to = models.ForeignKey("self",on_delete=models.CASCADE,null=True,blank=True)
-	text = models.TextField()
-# ---------------------------------------------------------------------------
