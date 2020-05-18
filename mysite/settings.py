@@ -129,12 +129,18 @@ LOGIN_URL='login'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
-from .key import decode
+import os.path
+from os import path
+
+if path.exists('key.py'):
+    from .key import decode
+    EMAIL_HOST_PASSWORD = decode
+else:
+    EMAIL_HOST_PASSWORD = ''
 
 EMAIL_BACKEND ='django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'codingclubiitg@gmail.com'
-EMAIL_HOST_PASSWORD = decode
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
