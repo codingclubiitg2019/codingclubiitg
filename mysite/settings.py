@@ -25,7 +25,7 @@ SECRET_KEY = 'ab^bejlhqu*#-t)@p_2z=@gobzpi9-i4-!rab*9738*g%enmv%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['172.16.101.211']
+ALLOWED_HOSTS = ['172.16.101.211','127.0.0.1:8000']
 
 AUTH_USER_MODEL = 'CodingClubIITG.User'
 # Application definition
@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'CodingClubIITG.apps.PollsConfig',
     'crispy_forms',
-    'cryptography'
+    'cryptography',
 
     'import_export',
 ]
