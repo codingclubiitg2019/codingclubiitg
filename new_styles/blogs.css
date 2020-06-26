@@ -1,9 +1,9 @@
 :root{
-    --global-font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --global-font-family:'Roboto', Helvetica, Arial, sans-serif;
     --global-button_color_pink-background-color:#E53167;
     --global-button_color-color:#FFFFFF;
     --global-border_color-border-color:#AFBED3;
-
+     --global-blue_color-color:#3480e3;
 }
 
 
@@ -22,116 +22,64 @@ button{
 }
 
 .wrapper{
-    overflow: hidden;
     background-image: url(../media/images_blogs/Blog.svg);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .inner-wrapper{
-    margin-top: 20px;
-    margin-left: 80px;
-    margin-right: 80px;
+    padding-top: 2%;
+    margin-right: 5%;
+    margin-left: 5%; 
 }
 
 
 #first_blog{
-    border-right: solid;
-    border-color: var(--global-border_color-border-color);
+   margin-top: 17%;
+   margin-bottom: 4%;
 
 }
 
 #second_blog{
-    border-left: solid;
-    border-color: var(--global-border_color-border-color);
+    margin-top: 4%;
+   margin-bottom: 4%;
 }
 
-@media(max-width: 380px)
-{
-     #clublogo{
-        width: 23%;
-
-    }
-
-    #nav-pos{
-        padding-left: 5px!important;
-        padding-right: 5px!important;
-    }
-
-    #navbar{
-      padding: 0px!important;
-    }
-
-    #cclogoright{
-      letter-spacing: 0px!important;
-    }
+.image-container{
+    padding-left: 11%;
+    padding-right: 11%;
 }
 
-@media(max-width: 430px){
-    #nav-pos{
-        padding: 0px!important;
-    }
-
-    #blogs{
-        margin-top: 40px!important;
-    }
-
-    #first_blog{
-        border-bottom: solid;
-        border-color: var(--global-border_color-border-color);
-        border-right: hidden;
-
-
-    }
-
-    #second_blog{
-        border-top: solid;
-        border-color: var(--global-border_color-border-color);
-        border-left: hidden;
-    }
-
-    #cclogoright{
-        font-size: 25px;
-    }
+.blog img{
+    border-radius: 25px;
 }
 
-
-@media(max-width: 768px){
-     .inner-wrapper{
-    margin: 0px; 
-  }
-
-    .col-sm-6{
-        margin-top: 20px;
-    }
-
-}
-#image{
-    width: 100%;
-    height: 90%%
-}
-
-@media(min-width: 1440px){
-#blogs{
-        margin-top: 100px!important;
-}
-
+.blog{
+    box-shadow: 0 0 10px 0.2px #3480E3;
+    border-radius: 25px;
+    margin: 2%;
 }
 
 #blogs{
-    margin-top: 90px;
-    margin-bottom: 90px;
+    text-align: -webkit-center;
+    margin-top: 4%;
+    margin-bottom: 3%;
 }
 
-#discription{
-    margin-top: 21px;
-
+#brief{
+    font-size: 18px;
+    font-weight: 500;
+    color: var( --global-blue_color-color);
+    letter-spacing: 0.044em;
+    text-align: left;
+    padding-left: 11%;
+    padding-top: 3%;
 }
-
 
 #info{
-
-    margin-top: 20px;
+    color: black;
+    letter-spacing: 0px;
+    font-size: 15px;
 }
 
 
@@ -151,31 +99,7 @@ button{
     width:wrap-content;
     padding:5px 20px;	
 }
-#activenavtab{
-	border-radius: 20px;
-    background-color: #E53167;
-    color: #FFFFFF;
-    text-align: center;
-}
 
-#cclogoright{
-color:#3480E3;  
-opacity:82%;
-font-size: 28px;
-letter-spacing: 0.07em; 
-}
-#navbar-content{
-	justify-content: flex-end;
-	margin-top: 0!important;
-}
-
-#nav-pos{
-	top: 0px;
-	left: 0px;
-}
-#font18{
-	font-size: 18px;
-}
 
 .row-me{
 	display: -ms-flexbox;
@@ -184,23 +108,58 @@ letter-spacing: 0.07em;
     flex-wrap: wrap;
 }
 
-.nav-item{
+
+#cclogoright{
+color:var(--global-blue_color-color);  
+opacity:82%;
+font-size: 28px;
+letter-spacing: 0.07em; 
+}
+
+#navbar-content{
+    justify-content: flex-end;
+    margin-top: 0!important;
+}
+
+#nav-item{
     padding-left: 20px;
     padding-right: 20px;
     font-size:17px;
     font-weight: 10px;
 }
 
-@media(max-width: 1024px){
-
-#nav-item{
-    padding-left: 0px!important;
-    padding-right: 0px!important;
-    font-size:13px!important;
-    font-weight: 10px!important;
+#space{
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
+#font18{
+    font-size: 18px;
+}
+
+#font20{
+    font-size: 20px;
 }
 
 
+
+@media (max-width: 430px)
+{
+    #clublogo{
+        width:23%;
+    }
+
+    .navbar{
+      padding: 0px!important;
+    }
+
+    #nav-pos{
+        padding-left: 5px!important;
+        padding-right: 5px!important;
+    }
+
+     #cclogoright{
+      letter-spacing: 0px!important;
+    }
+}
 

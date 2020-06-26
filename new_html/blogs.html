@@ -20,7 +20,16 @@
 		<div class="inner-wrapper">
 			<div class="container-fluid" id="nav-pos">
 					<nav class="navbar navbar-expand-lg navbar-light">
-				  		<img id="clublogo" src="../media/images_homepage/fav.jpg" alt="..." > <h3 id="cclogoright" >Coding Club</h3>
+				  		<img id="clublogo" src="../media/images_homepage/fav.jpg" alt="..." > 
+				  		<!-- added here-->		
+	            <div>
+
+		  		<h3 id="cclogoright" >Coding Club</h3>
+		  		<h3 id="cclogoright" style="font-size: 21px;">IIT Guwahati</h3>
+
+		  	   </div>
+
+    <!--till this-->
 				  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
 				    		<span class="navbar-toggler-icon"></span>
 				  		</button>
@@ -31,17 +40,20 @@
 				        			<a class="nav-link" href="./home.html" id="button2">Home </a>
 				      			</li>
 							    <li class="nav-item">
-							        <a class="nav-link" href="#" id="button2">About us</a>
+							        <a class="nav-link" href="./about_us.html" id="button2">About us</a>
 							    </li>
 							    <li class="nav-item">
-							        <a class="nav-link" href="#" id="button2">Events</a>
+							        <a class="nav-link" href="./events.html" id="button2">Events</a>
 							    </li>
 							    <li class="nav-item">
-							        <a class="nav-link" href="#" id="button1">Blogs <span class="sr-only">(current)</span></a>
+							        <a class="nav-link" href="./blogs.html" id="button1">Blogs <span class="sr-only">(current)</span></a>
 							    </li>
 							    <li class="nav-item">
-							        <a class="nav-link" href="#" id="button2">Projects*</a>
+							        <a class="nav-link" href="./ongoing_projects.html" id="button2">Projects*</a>
 							    </li>
+							    <li id="nav-item" class="nav-item">
+					        <a class="nav-link" href="./login.html" id="button2" style="color:var(--global-button_color_pink-background-color); font-weight: bold;">Login/Sign Up</a>
+					           </li>
 				    		</ul>
 				  		</div>
 					</nav>
@@ -50,77 +62,74 @@
 
 
 			<div id="blogs" class="container-fluid">
-				<div class="row justify-content-center">
-					<div id="first_blog"class="col-sm-5">
-						<div class="container-fluid">
-							<div id="image-container" class="container-fluid">
-								<a href=""><img id="image"src="../media/images_blogs/Image 9.png"></a>
-							</div>
-							<div class="container-fluid">
-								<div id="discription" class="container-fluid">
-									<p>Getting started and going deep into Web Development</p>
-								</div>
-								<div id="info" class="container-fluid">
-									<p>Posted by: Shubham Singhal<br>Posted on: 17 April 2017</p>
-								</div>
-							</div>
+				<div class="row-me justify-content-center">
+
+					<div class="col-md-5 blog">
+						<div id="first_blog">
+						<div class="image-container">
+							<a href="./blog1.html"><img src="../media/images_blogs/Image 9.png" width="100%"></a>
+						</div>
+						<div id="brief">
+								<p >Getting started and going deep into Web Development</p>
+								<p id="info">Posted by: Shubham Singhal<br>Posted on: 17 April 2017</p>
+						</div>
 						</div>
 					</div>
-					<div id="second_blog" class="col-sm-5">
-						<div class="container-fluid">
-							<div id="image-container" class="container-fluid">
-								<a href="#"><img id="image" src="../media/images_blogs/Image 8.png"></a>
-							</div>
-							<div class="container-fluid">
-								<div id="discription" class="container-fluid">
-									<p>CCSOC event-IIT Kanpur Network series and the  prerequisites to get started</p>
-								</div>
-								<div id="info" class="container-fluid">
-									<p>Posted by Satya Prakash<br>Posted on: 17 April 2017</p>
-								</div>
-							</div>
+
+					<div class="col-md-5 blog">
+						<div id="second_blog">
+						<div class="image-container">
+							<a href="./blog2.html"><img src="../media/images_blogs/Image 8.png" width="100%"></a>
+						</div>
+						<div id="brief">
+								<p>CCSOC event-IIT Kanpur Network series and the  prerequisites to get started</p>
+								<p id="info">Posted by Satya Prakash<br>Posted on: 17 April 2017</p>
 						</div>
 					</div>
-				</div>
-			</div>
-
-
-
-
-			<div class="container-fluid" id="space" >
-				<div class="row-me">
-					<div class="col-lg-auto">
-						<div>
-							<p id="font18"><strong>Contacts :</strong></p>
-						</div>
-						<div>
-							<p >E-mail: <a href="#" style="color:black;">codingclub@gmail.com</a></p>
-						</div>
-						<div>
-							<h6 id="font20"><strong>Address :</strong></h6>
-							<p  >IIT Guwahati<br>
-								Near Doul Gobinda Road, Amingaon<br>
-								North Guwahati, Guwahati,<br>
-								Assam-781039</p>
-						</div>
 						
 					</div>
-					<div class="col-lg-auto align-self-center offset-lg-3" style="text-align: center;">
-						<h5 style="margin:15px;"><strong>Follow us on</strong></h5>
-						<ul style="padding-left: initial;" >
-							<li style="display:inline; padding: 10px;">
-								<a href="https://www.facebook.com/codingclubiitg/"> <img  src="../media/images_homepage/icons-3.png"   alt="..."   > </a>
-							</li >
-							<li style="display:inline; padding: 10px;">
-								<a href="#"> <img  src="../media/images_homepage/icons-1.png"   alt="..."   > </a>
-							</li>
-							<li style="display:inline; padding: 10px">
-								<a href="#"> <img  src="../media/images_homepage/icons-2.png"   alt="..."   > </a>
-							</li>
-						</ul>
-					</div>
+
+					
 				</div>
 			</div>
+
+
+			<!--footer-->
+			<div class="container-fluid" id="space" >
+			<div class="row-me justify-content-center">
+				<div class="col-lg-4">
+					<div>
+						<p id="font18"><strong>Contacts :</strong></p>
+					</div>
+					<div>
+						<p >E-mail: <a href="#" style="color:black;">codingclub@gmail.com</a></p>
+					</div>
+					<div>
+						<h6 id="font20"><strong>Address :</strong></h6>
+						<p  >IIT Guwahati<br>
+							Near Doul Gobinda Road, Amingaon<br>
+							North Guwahati, Guwahati,<br>
+							Assam-781039</p>
+					</div>
+					
+				</div>
+				<div class="col-lg-auto align-self-center" style="text-align: center;">
+					<h5 style="margin:15px;"><strong>Follow us on</strong></h5>
+					<ul style="padding-left: initial;" >
+						<li style="display:inline; padding: 10px;">
+							<a href="https://www.facebook.com/codingclubiitg/" target="_blank"> <img  src="../media/images_homepage/icons-3.png"   alt="..."   > </a>
+						</li >
+						<li style="display:inline; padding: 10px;">
+							<a href="#" target="_blank"> <img  src="../media/images_homepage/icons-1.png"   alt="..."   > </a>
+						</li>
+						<li style="display:inline; padding: 10px">
+							<a href="#" target="_blank"> <img  src="../media/images_homepage/icons-2.png"   alt="..."   > </a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+			
 		</div>
     </div>
 </body>

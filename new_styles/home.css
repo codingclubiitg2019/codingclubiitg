@@ -1,8 +1,8 @@
 :root{
-    --global-font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --global-font-family:'Roboto', Helvetica, Arial, sans-serif;
     --global-button_color_pink-background-color:#E53167;
     --global-button_color-color:#FFFFFF;
-
+    --global-blue_color-color:#3480E3;
 }
 
 
@@ -19,10 +19,22 @@ body{
 	font-size: 18px;
 }
 
-#space{
-	padding-top: 50px;
-	padding-bottom: 50px;
+#space1{
+  margin-top: 6%;
+  margin-bottom: 6%;
 }
+
+#space{
+  margin-top: 3%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+#font20{
+    font-size: 20px;
+}
+
+
 #space2{
 	padding-bottom: 40px;
 	font-size: 35px;
@@ -66,7 +78,7 @@ body{
         padding-right: 5px!important;
     }
 
-    #navbar{
+    .navbar{
       padding: 0px!important;
     }
 
@@ -85,15 +97,11 @@ body{
 }
 
 .inner-wrapper{
-	margin-top: 30px;
-	margin-left: 80px;
-	margin-right: 80px;
+  padding-top: 2%;
+  margin-right: 8%;
+  margin-left: 10%; 
 }
 
- .card-dim{
-  	height: 508px;
-  	width: 364px;
-  }
 
 .card-img-top{
   max-height: 181px;
@@ -101,6 +109,7 @@ body{
 .card-dim{
 	max-height: 27em;
 	max-width: 18em;
+  margin: auto;
 }
 
 .row-me{
@@ -121,14 +130,6 @@ body{
   .inner-wrapper{
   	margin: 0px; 
   }
-  .wrapper{
-  	backface-visibility: hidden;
-  }
-
-  .card-dim{
-	max-height: 27em;
-	max-width: 18em;
-}
 
    .col-sm-auto{
    	padding-top: 20px;
@@ -156,7 +157,7 @@ body{
 }
 
 #cclogoright{
-color:#3480E3;  
+color:var(--global-blue_color-color);  
 opacity:82%;
 font-size: 28px;
 letter-spacing: 0.07em; 
