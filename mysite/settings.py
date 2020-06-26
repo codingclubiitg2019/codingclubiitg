@@ -25,7 +25,7 @@ SECRET_KEY = 'ab^bejlhqu*#-t)@p_2z=@gobzpi9-i4-!rab*9738*g%enmv%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['172.16.101.211']
+ALLOWED_HOSTS = ['172.16.101.211','127.0.0.1:8000']
 
 AUTH_USER_MODEL = 'CodingClubIITG.User'
 # Application definition
@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'CodingClubIITG.apps.PollsConfig',
     'crispy_forms',
+    'cryptography',
+
     'import_export',
 ]
 
@@ -133,3 +135,19 @@ LOGIN_URL='login'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+import os.path
+from os import path
+
+if path.exists('key.py'):
+    from .key import decode
+    EMAIL_HOST_PASSWORD = decode
+else:
+    EMAIL_HOST_PASSWORD = ''
+
+EMAIL_BACKEND ='django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'codingclubiitg@gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False

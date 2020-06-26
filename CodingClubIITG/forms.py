@@ -26,3 +26,7 @@ class EventsForm(forms.ModelForm):
 	class Meta:
 		model = Event
 		fields=['name','venue','speakers','details','date','img']
+
+class FeedbackForm(forms.Form):
+	topic = forms.CharField(max_length=50)
+	feedback = forms.CharField(widget=forms.Textarea)
