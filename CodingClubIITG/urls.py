@@ -9,13 +9,22 @@ urlpatterns = [
     re_path('^addevents/$', views.addEvents, name = 'addevents'),
     re_path('^$', views.index, name='index'),
     re_path('^aboutus/$', views.aboutus, name='aboutus'),
-    re_path('^blog/$', views.blog, name='blog'),
+    re_path('^blogs/$', views.blogs, name='blogs'),
+    re_path('^blog1/$', views.blog1, name='blog1'),
+    re_path('^blog2/$', views.blog2, name='blog2'),
+
     re_path('^events/$', views.events, name='events'),
+    re_path('^events_2018/$', views.events_2018, name='events_2018'),
+    re_path('^events_2017/$', views.events_2017, name='events_2017'),
+
     re_path('^projects/$', views.projects, name='projects'),
+    re_path('^completed_projects/$', views.completed_projects, name='completed_projects'),
+
     # path('logout/', views.logout, name='logout'),
     re_path('^eventdescription/<int:pk>$', views.event_template, name='event_template'),
     path("projects/<int:pk>", views.project_detail, name="project_detail"),
     path("events/<int:pk>", views.event_detail, name="event_detail"),
+
 
     # New additions
 

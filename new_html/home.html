@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	{% load static %}
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<title>Coding Club</title>
 
 	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="../new_styles/home.css">
+	<link rel="stylesheet" type="text/css" href="{% static 'home.css' %}">
 
 	<link rel="icon" type="image/jpg" href="../media/images_homepage/fav.jpg">
 
@@ -21,8 +22,8 @@
 	<div class="inner-wrapper ">
 		<div class="container-fluid" id="nav-pos">
 			<nav class="navbar navbar-expand-lg navbar-light">
-		  		<img id="clublogo" src="../media/images_homepage/fav.jpg" alt="..." > 
-	<!-- added here-->		
+		  		<img id="clublogo" src="../media/images_homepage/fav.jpg" alt="..." >
+	<!-- added here-->
 	            <div>
 
 		  		<h3 id="cclogoright" >Coding Club</h3>
@@ -130,7 +131,7 @@
 		</div>
 
 		<div class="container-fluid" id="space1">
-			<div class="row-me">	
+			<div class="row-me">
 				<div class="col-md-6">
 					<div>
 						<h2 id="space2" style="">How to get started?</h2>
@@ -140,21 +141,21 @@
 						We have some very good material for you,<br>
 					check out the blog.</p>
 					</div>
-					
+
 						<button class="button" id="button1" onclick="window.location.href = './blogs.html'">	Read Blog	</button>
 				</div>
 				<div class="col-md-5">
 						<img class="image1" src="../media/images_homepage/undraw_maker_launch_crhe.jpg">
 				</div>
 			</div>
-		</div>	
+		</div>
 
 		<!--footer-->
 
 		<div class="container-fluid" id="space" >
 			<div class="row-me " style="justify-content:space-around;">
 				<div class="col-lg-auto align-self-center" style="text-align: center; margin:15px;">
-						<h5 id="font18" style="margin:15px;"><strong>Contacts :</strong></h5>	
+						<h5 id="font18" style="margin:15px;"><strong>Contacts :</strong></h5>
 						<p >E-mail: <a href="#" style="color:black; text-decoration: underline;">codingclub@gmail.com</a></p>
 					</div>
 
@@ -184,14 +185,14 @@
 							North Guwahati, Guwahati,<br>
 							Assam-781039</p>
 					</div>
-					
-				
-				
+
+
+
 			</div>
 		</div>
 
 
 	</div>
-</div>	
+</div>
 </body>
 </html>

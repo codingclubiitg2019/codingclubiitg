@@ -16,17 +16,17 @@ from django.shortcuts import get_object_or_404
 def index(request):
     if not request.user.is_authenticated:
         user=''
-        return render(request, 'CodingClubIITG/index.html',{'user':user})
+        return render(request, 'index.html',{'user':user})
     else:
         user = request.user
         favorite_events = Favorite_events.objects.filter(for_user=user)
         favorite_projects = Favorite_projects.objects.filter(for_user=user)
-        return render(request, 'CodingClubIITG/index.html',{'favorite_events':favorite_events,'favorite_projects':favorite_projects,'user':user})
+        return render(request, 'index.html',{'favorite_events':favorite_events,'favorite_projects':favorite_projects,'user':user})
 
 def aboutus(request):
     members=Members.objects.all()
 
-    return render(request,'CodingClubIITG/aboutus.html',{'members': members})
+    return render(request,'about_us.html',{'members': members})
 
 
 def events(request):
@@ -40,7 +40,13 @@ def events(request):
         for f in fav:
             fav_events.append(f.event)
 
-    return render(request, 'CodingClubIITG/events.html', {'events':events,'fav_events':fav_events,'user':user})
+    return render(request, 'events.html', {'events':events,'fav_events':fav_events,'user':user})
+
+def events_2018(request):
+    return render(request,'events_2018.html')
+
+def events_2017(request):
+    return render(request,'events_2017.html')
 
 def event_detail(request, pk):
     event = Event.objects.get(pk=pk)
@@ -55,9 +61,14 @@ def event_detail(request, pk):
         'comments':comments,'event_id':pk,'user':user
     })
 
-def blog(request):
-    return render(request, 'CodingClubIITG/blogone.html')
+def blogs(request):
+    return render(request, 'blogs.html')
 
+def blog1(request):
+    return render(request, 'blog1.html')
+
+def blog2(request):
+    return render(request, 'blog2.html')
 
 def projects(request):
     projects=Projects.objects.all().order_by("-date")
@@ -70,7 +81,10 @@ def projects(request):
         for f in fav:
             fav_projects.append(f.project)
 
-    return render(request, 'CodingClubIITG/projects.html',{'projects':projects,'fav_projects':fav_projects,'user':user})
+    return render(request, 'ongoing_projects.html',{'projects':projects,'fav_projects':fav_projects,'user':user})
+
+def completed_projects(request):
+    return render(request,'completed_projects.html')
 
 def project_detail(request, pk):
     project = Projects.objects.get(pk=pk)
@@ -97,6 +111,12 @@ def register(request):
             user=form.save(commit=False)
             username = form.cleaned_data.get('username')
             password = form.cleaned_data.get('password')
+            confirm_password = form.cleaned_data.get('confirm_password')
+
+            if password!=confirm_password:
+                messages.error(request, f"Password and Confirm password doesn't match.")
+                return render(request, 'register.html', {'form': form})
+
             user.set_password(password)
             user.save()
 
@@ -104,11 +124,11 @@ def register(request):
             if user is not None:
                 if user.is_active:
                     login(request, user)
-
+                    messages.success(request, f"Registered successfully.")
                     return redirect('index')
     else:
         form = UserRegisterForm()
-    return render(request, 'CodingClubIITG/register.html', {'form': form})
+    return render(request, 'register.html', {'form': form})
 
 @login_required
 def addProjects(request):
