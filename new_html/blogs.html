@@ -7,32 +7,19 @@
 
 			<div id="blogs" class="container-fluid">
 				<div class="row-me justify-content-center">
-
+					{% for blog in blogs %}
 					<div class="col-md-5 blog">
 						<div id="first_blog">
 						<div class="image-container">
-							<a href="{% url 'blog1' %}"><img src="../media/images_blogs/Image 9.png" width="100%"></a>
+							<a href="{% url 'blog_details' blog.pk %}"><img src="{{ blog.img.url }}" width="100%"></a>
 						</div>
 						<div id="brief">
-								<p >Getting started and going deep into Web Development</p>
-								<p id="info">Posted by: Shubham Singhal<br>Posted on: 17 April 2017</p>
+								<p >{{ blog.topic }}</p>
+								<p id="info">Posted by: {{ blog.author }}<br>Posted on: {{ blog.posted_on }}</p>
 						</div>
 						</div>
 					</div>
-
-					<div class="col-md-5 blog">
-						<div id="second_blog">
-						<div class="image-container">
-							<a href="{% url 'blog2' %}"><img src="../media/images_blogs/Image 8.png" width="100%"></a>
-						</div>
-						<div id="brief">
-								<p>CCSOC event-IIT Kanpur Network series and the  prerequisites to get started</p>
-								<p id="info">Posted by Satya Prakash<br>Posted on: 17 April 2017</p>
-						</div>
-					</div>
-
-					</div>
-
+					{% endfor %}
 
 				</div>
 			</div>

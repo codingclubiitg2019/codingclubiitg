@@ -10,12 +10,10 @@ urlpatterns = [
     re_path('^$', views.index, name='index'),
     re_path('^aboutus/$', views.aboutus, name='aboutus'),
     re_path('^blogs/$', views.blogs, name='blogs'),
-    re_path('^blog1/$', views.blog1, name='blog1'),
-    re_path('^blog2/$', views.blog2, name='blog2'),
+    path('blog_details/<int:pk>', views.blog_details, name='blog_details'),
 
     re_path('^events/$', views.events, name='events'),
-    re_path('^events_2018/$', views.events_2018, name='events_2018'),
-    re_path('^events_2017/$', views.events_2017, name='events_2017'),
+    path('events_year/<str:year>', views.events_year, name='events_year'),
 
     re_path('^projects/$', views.projects, name='projects'),
     re_path('^completed_projects/$', views.completed_projects, name='completed_projects'),

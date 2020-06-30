@@ -11,9 +11,9 @@
 				<div class="col-lg-4 align-self-center " >
 					<table class="table-bordered" style="margin-left:15%;">
 						<tr>      <td id="one" >Events</td>     </tr>
-                        <tr>      <td id="two" style="border-top:0px;"><a href="{% url 'events' %}" class="activeyear">2019 → </a> </td>       </tr>
-                        <tr>      <td id="two"><a href="{% url 'events_2018' %}">2018 →</a> </td>       </tr>
-                        <tr>      <td id="two"><a href="{% url 'events_2017' %}">2017 →</a> </td>       </tr>
+                        <tr>      <td id="two" style="border-top:0px;"><a href="{% url 'events_year' 2019 %}" {% if request.path == '/events_year/2019' or request.path == '/events/' %} class="activeyear" {% endif %}>2019 → </a> </td>       </tr>
+                        <tr>      <td id="two"><a href="{% url 'events_year' 2018 %}" {% if request.path == '/events_year/2018' %} class="activeyear" {% endif %}>2018 →</a> </td>       </tr>
+                        <tr>      <td id="two"><a href="{% url 'events_year' 2017 %}" {% if request.path == '/events_year/2017' %} class="activeyear" {% endif %}>2017 →</a> </td>       </tr>
                    </table>
                </div>
                <div class="col-lg-5">
@@ -27,67 +27,44 @@
 		<!-- events of year requested-->
 
 		<div class ="container-fluid" id="year">
+			{% if request.path == '/events_year/2019' or request.path == '/events/' %}
 			<h2>2019</h2>
+			{% elif request.path == '/events_year/2018' %}
+			<h2>2018</h2>
+			{% elif request.path == '/events_year/2017' %}
+			<h2>2017</h2>
+			{% endif %}
 		</div>
 
 
 		<div id="events" class="container-fluid">
+			{% if events %}
 			<div class="row-me justify-content-center"  >
+				{% for event in events %}
 				<div class="col-sm-auto " >
 					<div class="container-fluid box">
 						<div class="card card-dim">
 							<div class="cotainer-xs" style="margin: 10%;">
-								<img src="../media/images_events/Image-10.png" class="card-img-top" alt="...">
+								<img src="{{ event.img.url }}" class="card-img-top" alt="...">
 							</div>
 						    <div class="card-body">
-						    	<h5 class="card-title">Interactive session  </h5>
+						    	<h5 class="card-title">{{ event.name }}  </h5>
 							    <h6 class="card-subtitle mb-2 text-muted"> Posted by Coding Club</h6>
-							    <p class="card-text">The Coding Club is organizing a Interactive Session, where seniors can guide them as to how one can enhance their technical skills in the three months. This will be followed by a discussion of the various events and projects that we will be undertaking next year, and a thorough discussion of the prerequisites for the same. This event must be attended by everyone who wants to be an active member in the coming semester</p>
-							    <p id="date"><strong>April 24, 2019</strong></p>
-						    </div>
-					    </div>
-					</div>
-				</div>
-				<div class="col-sm-auto " >
-					<div class="container-fluid box">
-						<div class="card card-dim">
-							<div class="cotainer-xs" style="margin: 10%;">
-								<img src="../media/images_events/Image-11.png" class="card-img-top" alt="...">
-							</div>
-						    <div class="card-body">
-						    	<h5 class="card-title">MyPolly Botathon</h5>
-							    <h6 class="card-subtitle mb-2 text-muted"> Posted by Coding Club</h6>
-							    <p class="card-text">Have you ever wondered about creating your own Siri or Google Allo? Have you ever thought of the intricacies or the inner working of the brain of a chatbot, or are you just interested in development using Machine Learning and Artificial Intelligence?<br>Well then you’re at the right place, we are organizing a “Botathon”, a Hackathon for creating chatbots sponsored by MyPolly where you’ve to create your own chatbots and test it out in the real world. The Botathon will be of 24 Hours and absolutely zero coding experience is required! also, you can participate alone or form a team at the Botathon venue.
-							    </p>
-							    <p id="date"><strong>May 16,2019</strong></p>
-						    </div>
-					    </div>
-					</div>
-				</div>
-				<div class="col-sm-auto" >
-					<div class="container-fluid box">
-						<div class="card card-dim">
-							<div class="cotainer-xs" style="margin: 10%;">
-								<img src="../media/images_events/Image-12.png" class="card-img-top" alt="...">
-							</div>
-						    <div class="card-body">
-						    	<h5 class="card-title">Interactive session   </h5>
-							    <h6 class="card-subtitle mb-2 text-muted"> Posted by Coding Club</h6>
-							    <p class="card-text">The Coding Club is organizing a Interactive Session, where seniors can guide them as to how one can enhance their technical skills in the three months. This will be followed by a discussion of the various events and projects that we will be undertaking next year, and a thorough discussion of the prerequisites for the same. This event must be attended by everyone who wants to be an active member in the coming semester.
+							    <p class="card-text"> {{ event.details }}</p>
+									<p class="card-text"> Speakers : {{ event.speakers }}</p>
+									<p id="date"><strong>{{ event.date }}</strong></p>
 
-                                <p id="date"><strong>April 24, 2019</strong></p>
+									<a href="{% url 'event_detail' event.pk %}">Learn More →</a>
 						    </div>
 					    </div>
 					</div>
 				</div>
+				{% endfor %}
 			</div>
+			{% else %}
+			<p style=" color: #E53167;text-align: center;">(Unavailable)</p>
+			{% endif %}
        </div>
 
-
-
-		<div class ="container-fluid" style="padding-top:20px; padding-bottom: 20px; text-align: center;">
-			<a href="#" id="lowerlink">    </a>&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;	<a href="{% url 'events_2018' %}" id="lowerlink" >2018 →</a>
-
-		</div>
 
 {% endblock %}

@@ -111,20 +111,20 @@ button{
 
 #button1{
     border-radius: 20px;
-    background-color: #FFFFFF;
-    color: grey;
-    text-align: center;
-    width:wrap-content;
-    padding:5px 20px;
-}
-
-#button2{
-    border-radius: 20px;
     background-color: var(--global-button_color_pink-background-color);
     color: var(--global-button_color-color);
     text-align: center;
     width:wrap-content;
     padding:5px 25px;
+}
+
+#button2{
+    border-radius: 20px;
+    background-color: #FFFFFF;
+    color: grey;
+    text-align: center;
+    width:wrap-content;
+    padding:5px 20px;
 }
 #button3{
     border-radius: 20px;

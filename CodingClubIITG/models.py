@@ -7,12 +7,17 @@ from django.contrib.auth.models import User
 class User(AbstractUser):
 	IsApproved = models.BooleanField(default=False)
 
+PROJECT_STATUS = (
+    ("ongoing", "ongoing"),
+    ("completed", "completed"),
+)
+
 class Projects(models.Model):
 	name = models.CharField(max_length=1024)
-	status = models.BooleanField(default=True)
-	outline = models.CharField(max_length=500)
+	status = models.CharField(choices=PROJECT_STATUS, default='ongoing',max_length=1024)
+	outline = models.CharField(max_length=500,blank=True,null=True)
 	details = models.CharField(max_length=30000)
-	prereq = models.CharField(max_length=1000)
+	prereq = models.CharField(max_length=1000,blank=True,null=True)
 	date = models.DateField(default=date.today)
 	img = models.ImageField(upload_to='projects/')
 
@@ -46,8 +51,12 @@ class Members(models.Model):
 	def __str__(self):
 		return self.name
 
-
-
+class Blog(models.Model):
+	img = models.FileField(upload_to='blogs/')
+	topic = models.CharField(max_length=1024)
+	author = models.CharField(max_length=1024)
+	posted_on = models.DateField(default=date.today)
+	details = models.TextField()
 
 
 # --------------------------------------------------------

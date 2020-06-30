@@ -28,9 +28,8 @@ def aboutus(request):
 
     return render(request,'about_us.html',{'members': members})
 
-
 def events(request):
-    events=Event.objects.all().order_by("-date")
+    events=Event.objects.filter(date__year=2019).order_by("-date")
     fav_events=[]
     if not request.user.is_authenticated:
         user=''
@@ -42,11 +41,19 @@ def events(request):
 
     return render(request, 'events.html', {'events':events,'fav_events':fav_events,'user':user})
 
-def events_2018(request):
-    return render(request,'events_2018.html')
 
-def events_2017(request):
-    return render(request,'events_2017.html')
+def events_year(request,year):
+    events=Event.objects.filter(date__year=year).order_by("-date")
+    fav_events=[]
+    if not request.user.is_authenticated:
+        user=''
+    else:
+        user = request.user
+        fav = Favorite_events.objects.filter(for_user=user)
+        for f in fav:
+            fav_events.append(f.event)
+
+    return render(request, 'events.html', {'events':events,'fav_events':fav_events,'user':user})
 
 def event_detail(request, pk):
     event = Event.objects.get(pk=pk)
@@ -62,16 +69,15 @@ def event_detail(request, pk):
     })
 
 def blogs(request):
-    return render(request, 'blogs.html')
+    blogs = Blog.objects.all()
+    return render(request, 'blogs.html',{'blogs':blogs})
 
-def blog1(request):
-    return render(request, 'blog1.html')
-
-def blog2(request):
-    return render(request, 'blog2.html')
+def blog_details(request,pk):
+    blog = Blog.objects.get(pk=pk)
+    return render(request,'blog_details.html',{'blog':blog})
 
 def projects(request):
-    projects=Projects.objects.all().order_by("-date")
+    projects=Projects.objects.filter(status='ongoing').order_by("-date")
     fav_projects=[]
     if not request.user.is_authenticated:
         user=''
@@ -84,7 +90,8 @@ def projects(request):
     return render(request, 'ongoing_projects.html',{'projects':projects,'fav_projects':fav_projects,'user':user})
 
 def completed_projects(request):
-    return render(request,'completed_projects.html')
+    completed_projects=Projects.objects.filter(status='completed').order_by("-date")
+    return render(request,'completed_projects.html',{'completed_projects':completed_projects})
 
 def project_detail(request, pk):
     project = Projects.objects.get(pk=pk)

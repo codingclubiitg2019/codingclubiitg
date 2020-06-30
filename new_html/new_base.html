@@ -54,7 +54,7 @@
 					        <a class="nav-link" href="{% url 'blogs' %}" {% if request.path == '/blogs/' %} id="button1" {% else %} id = "button2" {% endif %}>Blogs </a>
 					    </li>
 					    <li id="nav-item" class="nav-item ">
-					        <a class="nav-link" href="{% url 'projects' %}" {% if request.path == '/projects/' %} id="button1" {% else %} id = "button2" {% endif %}>Projects* </a>
+					        <a class="nav-link" href="{% url 'projects' %}" {% if request.path == '/projects/' or request.path == '/completed_projects/' %} id="button1" {% else %} id = "button2" {% endif %}>Projects* </a>
 					    </li>
 
 							{% if user.is_authenticated %}

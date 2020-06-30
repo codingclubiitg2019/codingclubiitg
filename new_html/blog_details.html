@@ -1,0 +1,41 @@
+{% extends "new_base.html" %}
+{% load static %}
+{% block style %}<link rel="stylesheet" type="text/css" href="{% static 'blogs12.css' %}">{% endblock %}
+{% block content %}
+
+
+<div class="container-fluid" id="blogs">
+	<div class="row-me justify-content-center">
+		<div class="col-lg-8">
+			<h2 class="heading">{{ blog.topic }}</h2>
+		</div>
+	</div>
+
+	<div class="row-me justify-content-center" style="margin-top: 3%;">
+		<div class="col-md-5 align-self-center">
+			<img class="image1"src="{{ blog.img.url }}">
+		</div>
+		<div class="col-md-5 align-self-center">
+			<img class="image1"src="../media/images_blogs/undraw_blogging_vpvv.png">
+		</div>
+	</div>
+
+	<div class="container-fluid">
+	   		<div class="row-me justify-content-center" id="margin" >
+	   			<div class="col-sm-8">
+	   			<p>{{ blog.topic }}<br><br>
+	   				Posted by: <a href="#">{{ blog.author }}</a><br>
+                    Posted on: {{ blog.posted_on }} <br><br>
+
+  {{ blog.details }}
+	<br><br>
+
+<a href="{% url 'blogs' %}" id="lowerlink">← Back to Blogs</a>
+
+	   			</p>
+	   		</div>
+	   		</div>
+	 </div>
+</div>
+
+{% endblock %}

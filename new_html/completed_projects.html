@@ -14,7 +14,34 @@
 
 <div class ="container-fluid" style="padding-top:20px; text-align: center;">
 <h2 >Completed Projects</h2>
-<p style=" color: #E53167;">(Unavailable)</p>
+</div>
+<div id="blogs" class="container-fluid">
+{% if completed_projects %}
+<div class="row-me justify-content-center">
+{% for project in completed_projects %}
+<div class="col-md " id="Project" >
+	<div class="container-fluid box">
+		<div class="card">
+			<div class="image-conatainer" style="margin: 10%;">
+				<img id="image"src="{{ project.img.url }}">
+			</div>
+
+			<div class="container-fluid">
+				<h5>{{ project.name }}</h5>
+				<h6>{{ project.outline }}</h6>
+					<p> {{ project.details }}</p>
+
+						<a href="{% url 'project_detail' project.pk %}">Learn More →</a>
+			</div>
+		</div>
+	</div>
+</div>
+{% endfor %}
+</div>
+{% else %}
+<p style=" color: #E53167;text-align: center;">(Unavailable)</p>
+
+{% endif %}
 </div>
 
 <div class="container-fluid" style="padding-bottom:500px;">

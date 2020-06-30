@@ -18,81 +18,32 @@
 </div>
 
 <div id="blogs" class="container-fluid">
+	{% if projects %}
 		<div class="row-me justify-content-center">
+			{% for project in projects %}
 					<div class="col-md " id="Project" >
 						<div class="container-fluid box">
 							<div class="card">
 								<div class="image-conatainer" style="margin: 10%;">
-									<img id="image"src="../media/images_projects/Image 11.png">
+									<img id="image"src="{{ project.img.url }}">
 								</div>
 
 								<div class="container-fluid">
-									<p>Intranet Search Engine<br>Python Crawle</p>
-								    <p>		<a href="#">Learn More →</a>	</p>
+									<h5>{{ project.name }}</h5>
+									<h6>{{ project.outline }}</h6>
+								    <p> {{ project.details }}</p>
+
+											<a href="{% url 'project_detail' project.pk %}">Learn More →</a>
 								</div>
 							</div>
 						</div>
-                    </div>
-
-                    <div class="col-md" id="Project">
-						<div class="container-fluid box">
-							<div class="card">
-							<div id="image-container" style="margin: 10%;">
-								<a href="#"><img id="image" src="../media/images_projects/Image 12.png"></a>
-							</div>
-							<div class="container-fluid">
-								<div id="discription" class="container-fluid">
-									<h5>Entertainment Bot</h5>
-							    <h6 >Messenger + Alexa bot</h6>
-							    <p >A simple personal assistant driven by text and voice with limitless possibilities of adding more features</p>
-							    <a href="#" >Learn More → </a>
-								</div>
-
-							</div>
-						</div>
-						</div>
-					</div>
+          </div>
+			{% endfor %}
 		</div>
+		{% else %}
+		<p style=" color: #E53167;text-align: center;">(Unavailable)</p>
 
-		<div class="row-me justify-content-center">
-					<div class="col-md" id="Project">
-						<div class="container-fluid box">
-					<div class="card">
-
-							<div class="image-conatainer" style="margin: 10%;">
-								<img id="image"src="../media/images_projects/Image 11.png">
-							</div>
-
-							<div class="container-fluid">
-
-									<p>Intranet Search Engine<br>Python Crawle</p>
-								    <p>		<a href="#">Learn More →</a>	</p>
-
-							</div>
-						</div>
-					</div>
-                    </div>
-
-                    <div class="col-md" id="Project" >
-						<div class="container-fluid box">
-							<div class="card">
-							<div id="image-container" style="margin: 10%;">
-								<a href="#"><img id="image" src="../media/images_projects/Image 12.png"></a>
-							</div>
-							<div class="container-fluid">
-								<div id="discription" class="container-fluid">
-									<h5>Entertainment Bot</h5>
-							    <h6 >Messenger + Alexa bot</h6>
-							    <p >A simple personal assistant driven by text and voice with limitless possibilities of adding more features</p>
-							    <a href="#" >Learn More → </a>
-								</div>
-
-							</div>
-						</div>
-						</div>
-					</div>
-		</div>
-
+		{% endif %}
 
 </div>
 
